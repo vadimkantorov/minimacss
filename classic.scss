@@ -1,10 +1,8 @@
-/*@import "minima/skins/classic" minima/skins/classic.scss */
 @charset "utf-8";
 
 $color-scheme-auto: false;
 $color-scheme-dark: false;
 
-/*@import "minima/skins/auto"; */
 @charset "utf-8";
 
 // Default color scheme settings
@@ -367,8 +365,6 @@ $table-border-color: $lm-table-border-color;
 
 }
 
-/*import minima/skins/classic.scss */
-
 @charset "utf-8";
 
 // Define defaults for each variable.
@@ -413,17 +409,7 @@ $on-large:         $on-laptop !default;
 }
 
 // Import pre-styling-overrides hook and style-partials.
-//@import
-//  "minima/custom-variables", // Hook to override predefined variables.
-//  "minima/base",             // Defines element resets.
-//  "minima/layout",           // Defines structure and style based on CSS selectors.
-//  "minima/custom-styles"     // Hook to override existing styles.
-//;
-
 //@import  "minima/custom-variables", // Hook to override predefined variables.
-
-/* @import "minima/base" */
-
 html {
   font-size: $base-font-size;
 }
@@ -706,7 +692,6 @@ table {
   }
 }
 
-/* @import "minima/layout" */
 /**
  * Site header
  */
@@ -1048,5 +1033,4 @@ table {
     width: calc(50% - (#{$spacing-unit} / 2));
   }
 }
-
 // @import "minima/custom-styles"     // Hook to override existing styles.
