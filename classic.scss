@@ -2,7 +2,6 @@
 
 $color-scheme-auto: false;
 $color-scheme-dark: false;
-
 @charset "utf-8";
 
 // Default color scheme settings
@@ -364,7 +363,6 @@ $table-border-color: $lm-table-border-color;
   @include lm-highlight;
 
 }
-
 @charset "utf-8";
 
 // Define defaults for each variable.
@@ -409,7 +407,8 @@ $on-large:         $on-laptop !default;
 }
 
 // Import pre-styling-overrides hook and style-partials.
-//@import  "minima/custom-variables", // Hook to override predefined variables.
+;
+// Placeholder to allow overriding predefined variables smoothly.
 html {
   font-size: $base-font-size;
 }
@@ -691,7 +690,6 @@ table {
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
-
 /**
  * Site header
  */
@@ -1033,4 +1031,5 @@ table {
     width: calc(50% - (#{$spacing-unit} / 2));
   }
 }
-// @import "minima/custom-styles"     // Hook to override existing styles.
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
