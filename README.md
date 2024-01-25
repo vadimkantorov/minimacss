@@ -15,5 +15,6 @@ cat ./minima/_sass/minima/skins/classic.scss ./minima/_sass/minima/skins/auto.sc
 # similar to naiveclassic.scss, classic.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/classic.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
 
 # compile classic.scss
-python -c 'import sass; sass.compile(dirname = (".", "."))'
+python -c "import sass;print(sass.compile(string='@import \'classic.scss\''))" > classic.css
+# python -c 'import sass; sass.compile(dirname = (".", "."))'
 ```

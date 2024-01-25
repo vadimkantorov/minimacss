@@ -1,139 +1,259 @@
 @charset "utf-8";
 
-$color-scheme-auto: false;
-$color-scheme-dark: false;
-@charset "utf-8";
-
-// Default color scheme settings
-// These are overridden in classic.css and dark.scss
-
-$color-scheme-auto: true !default;
-$color-scheme-dark: false !default;
-
-
 // Light mode
 // ----------
 
-$lm-brand-color:           #828282 !default;
-$lm-brand-color-light:     lighten($lm-brand-color, 40%) !default;
-$lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
+:root {
+    --minima-text-color-hue: 0;
+    --minima-text-color-saturation: 0%;
+    --minima-text-color-lightness: 7%;
+  
+    --minima-brand-color-hue: 0;
+    --minima-brand-color-saturation: 0%;
+    --minima-brand-color-lightness: 51%;
+  
+    --minima-link-base-color-hue: 214;
+    --minima-link-base-color-saturation: 76%;
+    --minima-link-base-color-lightness: 53%;
+  
+    --minima-brand-color: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), var(--minima-brand-color-lightness));
+    --minima-brand-color-light: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) + 40%));
+    --minima-brand-color-dark : hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) - 25%));
+  
+    --minima-site-title-color: var(--minima-brand-color-dark);
+  
+    --minima-text-color: hsl(var(--minima-text-color-hue), var(--minima-text-color-saturation), var(--minima-text-color-lightness));
+    --minima-background-color: #fdfdfd;
+    --minima-code-background-color: #eeeeff;
+  
+    --minima-link-base-color: hsl(var(--minima-link-base-color-hue), var(--minima-link-base-color-saturation), var(--minima-link-base-color-lightness)) ;
+    --minima-link-visited-color: hsl(var(--minima-link-base-color-hue), var(--minima-link-base-color-saturation), calc(var(--minima-link-base-color-lightness) - 15%)) ;
+    --minima-link-hover-color: var(--minima-text-color) ;
+  
+    --minima-border-color-01: var(--minima-brand-color-light) ;
+    --minima-border-color-02: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) + 35%)) ;
+    --minima-border-color-03: var(--minima-brand-color-dark) ;
+  
+    --minima-table-text-color: hsl(var(--minima-text-color-hue), var(--minima-text-color-saturation), calc(var(--minima-text-color-lightness) + 18%)) ;
+    --minima-table-zebra-color: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) + 46%)) ;
+    --minima-table-header-bg-color: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) + 43%)) ;
+    --minima-table-header-border: hsl(var(--minima-brand-color-hue), var(--minima-brand-color-saturation), calc(var(--minima-brand-color-lightness) + 37%)) ;
+    --minima-table-border-color: var(--minima-border-color-01) ;
+}
 
-$lm-site-title-color:      $lm-brand-color-dark !default;
+:root {
+    --minima-base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif ;
+    --minima-code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+    --minima-base-font-size: 16px ;
+    --minima-base-font-weight: 400 ;
+    --minima-small-font-size: calc(var(--minima-base-font-size) * 0.875) ;
+    --minima-base-line-height: 1.5 ;
+    --minima-spacing-unit: 30px ;
+    --minima-table-text-align: left ;
+}
 
-$lm-text-color:            #111111 !default;
-$lm-background-color:      #fdfdfd !default;
-$lm-code-background-color: #eeeeff !default;
+$base-font-family: var(--minima-base-font-family);
+$code-font-family: var(--minima-code-font-family);
+$base-font-size:   var(--minima-base-font-size); 
+$base-font-weight: var(--minima-base-font-weight); 
+$small-font-size:  var(--minima-small-font-size);
+$base-line-height: var(--minima-base-line-height);
+$spacing-unit:     var(--minima-spacing-unit);
+$spacing-unit-half:calc(var(--minima-spacing-unit) * 0.5 );
+$spacing-unit-quat:calc(var(--minima-spacing-unit) * 0.25);
+$table-text-align: var(--minima-table-text-align);
 
-$lm-link-base-color:       #2a7ae2 !default;
-$lm-link-visited-color:    darken($lm-link-base-color, 15%) !default;
-$lm-link-hover-color:      $lm-text-color !default;
 
-$lm-border-color-01:       $lm-brand-color-light !default;
-$lm-border-color-02:       lighten($lm-brand-color, 35%) !default;
-$lm-border-color-03:       $lm-brand-color-dark !default;
-
-$lm-table-text-color:      lighten($lm-text-color, 18%) !default;
-$lm-table-zebra-color:     lighten($lm-brand-color, 46%) !default;
-$lm-table-header-bg-color: lighten($lm-brand-color, 43%) !default;
-$lm-table-header-border:   lighten($lm-brand-color, 37%) !default;
-$lm-table-border-color:    $lm-border-color-01 !default;
+$brand-color: var(--minima-brand-color);
+$brand-color-light: var(--minima-brand-color-light);
+$brand-color-dark: var(--minima-brand-color-dark);
+$site-title-color: var(--minima-site-title-color);
+$text-color: var(--minima-text-color);
+$background-color: var(--minima-background-color);
+$code-background-color: var(--minima-code-background-color);
+$link-base-color: var(--minima-link-base-color);
+$link-visited-color: var(--minima-link-visited-color);
+$link-hover-color: var(--minima-link-hover-color);
+$border-color-01: var(--minima-border-color-01);
+$border-color-02: var(--minima-border-color-02);
+$border-color-03: var(--minima-border-color-03);
+$table-text-color: var(--minima-table-text-color);
+$table-zebra-color: var(--minima-table-zebra-color);
+$table-header-bg-color: var(--minima-table-header-bg-color);
+$table-header-border: var(--minima-table-header-border);
+$table-border-color: var(--minima-table-border-color);
 
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // ----------------------------------------------------------------------------
 
-@mixin lm-highlight {
-  .highlight {
-    .c     { color: #998; font-style: italic } // Comment
-    .err   { color: #a61717; background-color: #e3d2d2 } // Error
-    .k     { font-weight: bold } // Keyword
-    .o     { font-weight: bold } // Operator
-    .cm    { color: #998; font-style: italic } // Comment.Multiline
-    .cp    { color: #999; font-weight: bold } // Comment.Preproc
-    .c1    { color: #998; font-style: italic } // Comment.Single
-    .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
-    .gd    { color: #000; background-color: #fdd } // Generic.Deleted
-    .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
-    .ge    { font-style: italic } // Generic.Emph
-    .gr    { color: #a00 } // Generic.Error
-    .gh    { color: #999 } // Generic.Heading
-    .gi    { color: #000; background-color: #dfd } // Generic.Inserted
-    .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
-    .go    { color: #888 } // Generic.Output
-    .gp    { color: #555 } // Generic.Prompt
-    .gs    { font-weight: bold } // Generic.Strong
-    .gu    { color: #aaa } // Generic.Subheading
-    .gt    { color: #a00 } // Generic.Traceback
-    .kc    { font-weight: bold } // Keyword.Constant
-    .kd    { font-weight: bold } // Keyword.Declaration
-    .kp    { font-weight: bold } // Keyword.Pseudo
-    .kr    { font-weight: bold } // Keyword.Reserved
-    .kt    { color: #458; font-weight: bold } // Keyword.Type
-    .m     { color: #099 } // Literal.Number
-    .s     { color: #d14 } // Literal.String
-    .na    { color: #008080 } // Name.Attribute
-    .nb    { color: #0086B3 } // Name.Builtin
-    .nc    { color: #458; font-weight: bold } // Name.Class
-    .no    { color: #008080 } // Name.Constant
-    .ni    { color: #800080 } // Name.Entity
-    .ne    { color: #900; font-weight: bold } // Name.Exception
-    .nf    { color: #900; font-weight: bold } // Name.Function
-    .nn    { color: #555 } // Name.Namespace
-    .nt    { color: #000080 } // Name.Tag
-    .nv    { color: #008080 } // Name.Variable
-    .ow    { font-weight: bold } // Operator.Word
-    .w     { color: #bbb } // Text.Whitespace
-    .mf    { color: #099 } // Literal.Number.Float
-    .mh    { color: #099 } // Literal.Number.Hex
-    .mi    { color: #099 } // Literal.Number.Integer
-    .mo    { color: #099 } // Literal.Number.Oct
-    .sb    { color: #d14 } // Literal.String.Backtick
-    .sc    { color: #d14 } // Literal.String.Char
-    .sd    { color: #d14 } // Literal.String.Doc
-    .s2    { color: #d14 } // Literal.String.Double
-    .se    { color: #d14 } // Literal.String.Escape
-    .sh    { color: #d14 } // Literal.String.Heredoc
-    .si    { color: #d14 } // Literal.String.Interpol
-    .sx    { color: #d14 } // Literal.String.Other
-    .sr    { color: #009926 } // Literal.String.Regex
-    .s1    { color: #d14 } // Literal.String.Single
-    .ss    { color: #990073 } // Literal.String.Symbol
-    .bp    { color: #999 } // Name.Builtin.Pseudo
-    .vc    { color: #008080 } // Name.Variable.Class
-    .vg    { color: #008080 } // Name.Variable.Global
-    .vi    { color: #008080 } // Name.Variable.Instance
-    .il    { color: #099 } // Literal.Number.Integer.Long
+.highlight {
+  .c     { color: #998; font-style: italic } // Comment
+  .err   { color: #a61717; background-color: #e3d2d2 } // Error
+  .k     { font-weight: bold } // Keyword
+  .o     { font-weight: bold } // Operator
+  .cm    { color: #998; font-style: italic } // Comment.Multiline
+  .cp    { color: #999; font-weight: bold } // Comment.Preproc
+  .c1    { color: #998; font-style: italic } // Comment.Single
+  .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
+  .gd    { color: #000; background-color: #fdd } // Generic.Deleted
+  .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
+  .ge    { font-style: italic } // Generic.Emph
+  .gr    { color: #a00 } // Generic.Error
+  .gh    { color: #999 } // Generic.Heading
+  .gi    { color: #000; background-color: #dfd } // Generic.Inserted
+  .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
+  .go    { color: #888 } // Generic.Output
+  .gp    { color: #555 } // Generic.Prompt
+  .gs    { font-weight: bold } // Generic.Strong
+  .gu    { color: #aaa } // Generic.Subheading
+  .gt    { color: #a00 } // Generic.Traceback
+  .kc    { font-weight: bold } // Keyword.Constant
+  .kd    { font-weight: bold } // Keyword.Declaration
+  .kp    { font-weight: bold } // Keyword.Pseudo
+  .kr    { font-weight: bold } // Keyword.Reserved
+  .kt    { color: #458; font-weight: bold } // Keyword.Type
+  .m     { color: #099 } // Literal.Number
+  .s     { color: #d14 } // Literal.String
+  .na    { color: #008080 } // Name.Attribute
+  .nb    { color: #0086B3 } // Name.Builtin
+  .nc    { color: #458; font-weight: bold } // Name.Class
+  .no    { color: #008080 } // Name.Constant
+  .ni    { color: #800080 } // Name.Entity
+  .ne    { color: #900; font-weight: bold } // Name.Exception
+  .nf    { color: #900; font-weight: bold } // Name.Function
+  .nn    { color: #555 } // Name.Namespace
+  .nt    { color: #000080 } // Name.Tag
+  .nv    { color: #008080 } // Name.Variable
+  .ow    { font-weight: bold } // Operator.Word
+  .w     { color: #bbb } // Text.Whitespace
+  .mf    { color: #099 } // Literal.Number.Float
+  .mh    { color: #099 } // Literal.Number.Hex
+  .mi    { color: #099 } // Literal.Number.Integer
+  .mo    { color: #099 } // Literal.Number.Oct
+  .sb    { color: #d14 } // Literal.String.Backtick
+  .sc    { color: #d14 } // Literal.String.Char
+  .sd    { color: #d14 } // Literal.String.Doc
+  .s2    { color: #d14 } // Literal.String.Double
+  .se    { color: #d14 } // Literal.String.Escape
+  .sh    { color: #d14 } // Literal.String.Heredoc
+  .si    { color: #d14 } // Literal.String.Interpol
+  .sx    { color: #d14 } // Literal.String.Other
+  .sr    { color: #009926 } // Literal.String.Regex
+  .s1    { color: #d14 } // Literal.String.Single
+  .ss    { color: #990073 } // Literal.String.Symbol
+  .bp    { color: #999 } // Name.Builtin.Pseudo
+  .vc    { color: #008080 } // Name.Variable.Class
+  .vg    { color: #008080 } // Name.Variable.Global
+  .vi    { color: #008080 } // Name.Variable.Instance
+  .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+:root {
+    --minima-content-width: 800px;
+}
+
+// Width of the content area
+@media screen and (min-width: 600px) { //on-medium = on-palm
+  .site-nav {
+    position: static;
+    float: right;
+    border: none;
+    background-color: inherit;
+  }
+
+  .site-nav label[for="nav-trigger"] {
+    display: none;
+  }
+
+  .site-nav .menu-icon {
+    display: none;
+  }
+
+  .site-nav input ~ .trigger {
+    display: block;
+  }
+
+  .site-nav .page-link {
+    display: inline;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    margin-left: auto;
+  }
+
+
+//@media screen and (min-width: $on-medium) {
+  .footer-col-wrapper {
+    display: flex
+  }
+
+  .footer-col {
+    width: calc(100% - (#{$spacing-unit} / 2 ));
+    padding: 0 ($spacing-unit-half);
+
+    &:first-child {
+      padding-right: $spacing-unit-half;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: $spacing-unit-half;
+    }
+  }
+//}
+
+}
+
+:root {
+  --minima-wrapper-max-width: calc( var(--minima-content-width) - (#{$spacing-unit}));
+  --minima-wrapper-padding-left-right: $spacing-unit-half;
+  
+  --minima-post-content-h1-font-size: 2.625rem;
+  --minima-post-content-h2-font-size: 1.75rem;
+  --minima-post-content-h3-font-size: 1.375rem;
+
+  --minima-footer-col1-width: calc(50% - (#{$spacing-unit} / 2));
+  --minima-footer-col2-width: calc(50% - (#{$spacing-unit} / 2));
+  --minima-footer-col3-width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+@media screen and (min-width: 800px) { //on-large
+:root{
+    --minima-wrapper-max-width: calc( var(--minima-content-width) - (#{$spacing-unit} * 2));
+    --minima-wrapper-padding-left-right: $spacing-unit;
+    
+    --minima-one-half-width: calc(50% - (#{$spacing-unit} / 2 ));
+  
+    --minima-post-content-h1-font-size: 2.625rem;
+    --minima-post-content-h2-font-size: 2rem;
+    --minima-post-content-h3-font-size: 1.625rem;
+
+    --minima-footer-col1-width: calc(35% - (#{$spacing-unit} / 2));
+    --minima-footer-col1-width: calc(20% - (#{$spacing-unit} / 2 ));
+    --minima-footer-col1-width: calc(45% - (#{$spacing-unit} / 2 ));
+
   }
 }
 
 
-// Dark mode
-// ---------
+@media screen and (max-width: 600px) { //on-palm
+:root {
+    --minima-site-title-padding-right: 45px;
+}
+}
 
-$dm-brand-color:           #999999 !default;
-$dm-brand-color-light:     lighten($dm-brand-color, 5%) !default;
-$dm-brand-color-dark:      darken($dm-brand-color, 35%) !default;
-
-$dm-site-title-color:      $dm-brand-color-light !default;
-
-$dm-text-color:            #bbbbbb !default;
-$dm-background-color:      #181818 !default;
-$dm-code-background-color: #212121 !default;
-
-$dm-link-base-color:       #79b8ff !default;
-$dm-link-visited-color:    $dm-link-base-color !default;
-$dm-link-hover-color:      $dm-text-color !default;
-
-$dm-border-color-01:       $dm-brand-color-dark !default;
-$dm-border-color-02:       $dm-brand-color-light !default;
-$dm-border-color-03:       $dm-brand-color !default;
-
-$dm-table-text-color:      $dm-text-color !default;
-$dm-table-zebra-color:     lighten($dm-background-color, 4%) !default;
-$dm-table-header-bg-color: lighten($dm-background-color, 10%) !default;
-$dm-table-header-border:   lighten($dm-background-color, 21%) !default;
-$dm-table-border-color:    $dm-border-color-01 !default;
-
+@media screen and (max-width: 800px) { //on-laptop
+:root {
+  --minima-table-display: block;
+  --minima-table-overflow-x: auto;
+  --minima-table-webkit-overflow-scrolling: touch;
+  --minima-table-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+}
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // List of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
@@ -141,252 +261,6 @@ $dm-table-border-color:    $dm-border-color-01 !default;
 // https://github.com/material-theme/vsc-material-theme/blob/master/scripts/generator/settings/specific/darker-hc.ts
 // https://github.com/material-theme/vsc-material-theme/blob/master/scripts/generator/color-set.ts
 // ----------------------------------------------------------------------------
-
-@mixin dm-highlight {
-  .highlight {
-    .c     { color: #545454; font-style: italic } // Comment
-    .err   { color: #f07178; background-color: #e3d2d2 } // Error
-    .k     { color: #89DDFF; font-weight: bold } // Keyword
-    .o     { font-weight: bold } // Operator
-    .cm    { color: #545454; font-style: italic } // Comment.Multiline
-    .cp    { color: #545454; font-weight: bold } // Comment.Preproc
-    .c1    { color: #545454; font-style: italic } // Comment.Single
-    .cs    { color: #545454; font-weight: bold; font-style: italic } // Comment.Special
-    .gd    { color: #000; background-color: #fdd } // Generic.Deleted
-    .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
-    .ge    { font-style: italic } // Generic.Emph
-    .gr    { color: #f07178 } // Generic.Error
-    .gh    { color: #999 } // Generic.Heading
-    .gi    { color: #000; background-color: #dfd } // Generic.Inserted
-    .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
-    .go    { color: #888 } // Generic.Output
-    .gp    { color: #555 } // Generic.Prompt
-    .gs    { font-weight: bold } // Generic.Strong
-    .gu    { color: #aaa } // Generic.Subheading
-    .gt    { color: #f07178 } // Generic.Traceback
-    .kc    { font-weight: bold } // Keyword.Constant
-    .kd    { font-weight: bold } // Keyword.Declaration
-    .kp    { font-weight: bold } // Keyword.Pseudo
-    .kr    { font-weight: bold } // Keyword.Reserved
-    .kt    { color: #FFCB6B; font-weight: bold } // Keyword.Type
-    .m     { color: #F78C6C } // Literal.Number
-    .s     { color: #C3E88D } // Literal.String
-    .na    { color: #008080 } // Name.Attribute
-    .nb    { color: #EEFFFF } // Name.Builtin
-    .nc    { color: #FFCB6B; font-weight: bold } // Name.Class
-    .no    { color: #008080 } // Name.Constant
-    .ni    { color: #800080 } // Name.Entity
-    .ne    { color: #900; font-weight: bold } // Name.Exception
-    .nf    { color: #82AAFF; font-weight: bold } // Name.Function
-    .nn    { color: #555 } // Name.Namespace
-    .nt    { color: #FFCB6B } // Name.Tag
-    .nv    { color: #EEFFFF } // Name.Variable
-    .ow    { font-weight: bold } // Operator.Word
-    .w     { color: #EEFFFF } // Text.Whitespace
-    .mf    { color: #F78C6C } // Literal.Number.Float
-    .mh    { color: #F78C6C } // Literal.Number.Hex
-    .mi    { color: #F78C6C } // Literal.Number.Integer
-    .mo    { color: #F78C6C } // Literal.Number.Oct
-    .sb    { color: #C3E88D } // Literal.String.Backtick
-    .sc    { color: #C3E88D } // Literal.String.Char
-    .sd    { color: #C3E88D } // Literal.String.Doc
-    .s2    { color: #C3E88D } // Literal.String.Double
-    .se    { color: #EEFFFF } // Literal.String.Escape
-    .sh    { color: #C3E88D } // Literal.String.Heredoc
-    .si    { color: #C3E88D } // Literal.String.Interpol
-    .sx    { color: #C3E88D } // Literal.String.Other
-    .sr    { color: #C3E88D } // Literal.String.Regex
-    .s1    { color: #C3E88D } // Literal.String.Single
-    .ss    { color: #C3E88D } // Literal.String.Symbol
-    .bp    { color: #999 } // Name.Builtin.Pseudo
-    .vc    { color: #FFCB6B } // Name.Variable.Class
-    .vg    { color: #EEFFFF } // Name.Variable.Global
-    .vi    { color: #EEFFFF } // Name.Variable.Instance
-    .il    { color: #F78C6C } // Literal.Number.Integer.Long
-  }
-}
-
-
-// Mode selection
-// --------------
-
-
-// Classic skin (always light mode)
-// Assign outside of the if construct to establish global variable scope
-
-$brand-color: $lm-brand-color;
-$brand-color-light: $lm-brand-color-light;
-$brand-color-dark: $lm-brand-color-dark;
-
-$site-title-color: $lm-site-title-color;
-
-$text-color: $lm-text-color;
-$background-color: $lm-background-color;
-$code-background-color: $lm-code-background-color;
-
-$link-base-color: $lm-link-base-color;
-$link-visited-color: $lm-link-visited-color;
-$link-hover-color: $lm-link-hover-color;
-
-$border-color-01: $lm-border-color-01;
-$border-color-02: $lm-border-color-02;
-$border-color-03: $lm-border-color-03;
-
-$table-text-color: $lm-table-text-color;
-$table-zebra-color: $lm-table-zebra-color;
-$table-header-bg-color: $lm-table-header-bg-color;
-$table-header-border: $lm-table-header-border;
-$table-border-color: $lm-table-border-color;
-
-
-@if $color-scheme-auto {
-
-  // Auto mode
-
-  :root {
-    --minima-brand-color: #{$lm-brand-color};
-    --minima-brand-color-light: #{$lm-brand-color-light};
-    --minima-brand-color-dark: #{$lm-brand-color-dark};
-
-    --minima-site-title-color: #{$lm-site-title-color};
-
-    --minima-text-color: #{$lm-text-color};
-    --minima-background-color: #{$lm-background-color};
-    --minima-code-background-color: #{$lm-code-background-color};
-
-    --minima-link-base-color: #{$lm-link-base-color};
-    --minima-link-visited-color: #{$lm-link-visited-color};
-    --minima-link-hover-color: #{$lm-link-hover-color};
-
-    --minima-border-color-01: #{$lm-border-color-01};
-    --minima-border-color-02: #{$lm-border-color-02};
-    --minima-border-color-03: #{$lm-border-color-03};
-
-    --minima-table-text-color: #{$lm-table-text-color};
-    --minima-table-zebra-color: #{$lm-table-zebra-color};
-    --minima-table-header-bg-color: #{$lm-table-header-bg-color};
-    --minima-table-header-border: #{$lm-table-header-border};
-    --minima-table-border-color: #{$lm-table-border-color};
-  }
-
-  @include lm-highlight;
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --minima-brand-color: #{$dm-brand-color};
-      --minima-brand-color-light: #{$dm-brand-color-light};
-      --minima-brand-color-dark: #{$dm-brand-color-dark};
-
-      --minima-site-title-color: #{$dm-site-title-color};
-
-      --minima-text-color: #{$dm-text-color};
-      --minima-background-color: #{$dm-background-color};
-      --minima-code-background-color: #{$dm-code-background-color};
-
-      --minima-link-base-color: #{$dm-link-base-color};
-      --minima-link-visited-color: #{$dm-link-visited-color};
-      --minima-link-hover-color: #{$dm-link-hover-color};
-
-      --minima-border-color-01: #{$dm-border-color-01};
-      --minima-border-color-02: #{$dm-border-color-02};
-      --minima-border-color-03: #{$dm-border-color-03};
-
-      --minima-table-text-color: #{$dm-table-text-color};
-      --minima-table-zebra-color: #{$dm-table-zebra-color};
-      --minima-table-header-bg-color: #{$dm-table-header-bg-color};
-      --minima-table-header-border: #{$dm-table-header-border};
-      --minima-table-border-color: #{$dm-table-border-color};
-    }
-
-    @include dm-highlight;
-  }
-
-  $brand-color: var(--minima-brand-color);
-  $brand-color-light: var(--minima-brand-color-light);
-  $brand-color-dark: var(--minima-brand-color-dark);
-
-  $site-title-color: var(--minima-site-title-color);
-
-  $text-color: var(--minima-text-color);
-  $background-color: var(--minima-background-color);
-  $code-background-color: var(--minima-code-background-color);
-
-  $link-base-color: var(--minima-link-base-color);
-  $link-visited-color: var(--minima-link-visited-color);
-  $link-hover-color: var(--minima-link-hover-color);
-
-  $border-color-01: var(--minima-border-color-01);
-  $border-color-02: var(--minima-border-color-02);
-  $border-color-03: var(--minima-border-color-03);
-
-  $table-text-color: var(--minima-table-text-color);
-  $table-zebra-color: var(--minima-table-zebra-color);
-  $table-header-bg-color: var(--minima-table-header-bg-color);
-  $table-header-border: var(--minima-table-header-border);
-  $table-border-color: var(--minima-table-border-color);
-
-
-} @else if $color-scheme-dark {
-
-  // Dark skin (always dark mode)
-
-  $brand-color: $dm-brand-color;
-  $brand-color-light: $dm-brand-color-light;
-  $brand-color-dark: $dm-brand-color-dark;
-
-  $site-title-color: $dm-site-title-color;
-
-  $text-color: $dm-text-color;
-  $background-color: $dm-background-color;
-  $code-background-color: $dm-code-background-color;
-
-  $link-base-color: $dm-link-base-color;
-  $link-visited-color: $dm-link-visited-color;
-  $link-hover-color: $dm-link-hover-color;
-
-  $border-color-01: $dm-border-color-01;
-  $border-color-02: $dm-border-color-02;
-  $border-color-03: $dm-border-color-03;
-
-  $table-text-color: $dm-table-text-color;
-  $table-zebra-color: $dm-table-zebra-color;
-  $table-header-bg-color: $dm-table-header-bg-color;
-  $table-header-border: $dm-table-header-border;
-  $table-border-color: $dm-table-border-color;
-
-  @include dm-highlight;
-
-
-} @else {
-
-  // Classic skin syntax highlighting
-  @include lm-highlight;
-
-}
-@charset "utf-8";
-
-// Define defaults for each variable.
-
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
-$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$spacing-unit:     30px !default;
-
-$table-text-align: left !default;
-
-// Width of the content area
-$content-width:    800px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-$on-medium:        $on-palm !default;
-$on-large:         $on-laptop !default;
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -396,15 +270,6 @@ $on-large:         $on-laptop !default;
 // }
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: #{$ratio}rem;
-}
 
 // Import pre-styling-overrides hook and style-partials.
 ;
@@ -454,7 +319,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: $spacing-unit-half;
 }
 
 hr {
@@ -551,8 +416,8 @@ a {
 blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * .5;
-  @include relative-font-size(1.125);
+  padding-left: $spacing-unit-half;
+  font-size: 1.125rem;//@include relative-font-size(1.125);
   font-style: italic;
 
   > :last-child {
@@ -609,21 +474,13 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: var(--minima-wrapper-max-width);
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit * .5;
-  padding-left: $spacing-unit * .5;
+  padding-right: var(--minima-wrapper-padding-left-right);
+  padding-left: var(--minima-wrapper-padding-left-right);
   @extend %clearfix;
-
-  @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-  }
 }
-
-
 
 /**
  * Clearfix
@@ -673,7 +530,7 @@ table {
     }
   }
   th, td {
-    padding: ($spacing-unit * 33.3333333333 * .01) ($spacing-unit * .5);
+    padding: (calc(#{$spacing-unit} * 33.3333333333 * .01)) ($spacing-unit-half);
   }
   th {
     background-color: $table-header-bg-color;
@@ -683,12 +540,12 @@ table {
     border: 1px solid $table-border-color;
   }
 
-  @include media-query($on-laptop) {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-  }
+  display: var(--minima-table-display);
+  overflow-x: var(--minima-table-overflow-x);
+  -webkit-overflow-scrolling: var(--minima-table-webkit-overflow-scrolling);
+  -ms-overflow-style: var(--minima-table-ms-overflow-style);
+
+  
 }
 /**
  * Site header
@@ -696,23 +553,21 @@ table {
 .site-header {
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  min-height: calc(#{$spacing-unit} * 1.865);
+  line-height: calc(#{$base-line-height} * #{$base-font-size} * 2.25);
 
   // Positioning context for the mobile navigation icon
   position: relative;
 }
 
 .site-title {
-  @include relative-font-size(1.625);
+  font-size: 1.625rem; //@include relative-font-size(1.625);
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 
-  @include media-query($on-palm) {
-    padding-right: 45px;
-  }
+  padding-right: var(--minima-site-title-padding-right);
 
   &,
   &:visited {
@@ -723,7 +578,7 @@ table {
 .site-nav {
   position: absolute;
   top: 9px;
-  right: $spacing-unit * .5;
+  right: $spacing-unit-half;
   background-color: $background-color;
   border: 1px solid $border-color-01;
   border-radius: 5px;
@@ -778,34 +633,6 @@ table {
     margin-left: 20px;
   }
 
-  @media screen and (min-width: $on-medium) {
-    position: static;
-    float: right;
-    border: none;
-    background-color: inherit;
-
-    label[for="nav-trigger"] {
-      display: none;
-    }
-
-    .menu-icon {
-      display: none;
-    }
-
-    input ~ .trigger {
-      display: block;
-    }
-
-    .page-link {
-      display: inline;
-      padding: 0;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-      margin-left: auto;
-    }
-  }
 }
 
 
@@ -819,8 +646,8 @@ table {
 }
 
 .footer-heading {
-  @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit * .5;
+  font-size: 1.125rem;//@include relative-font-size(1.125);
+  margin-bottom: $spacing-unit-half;
 }
 
 .feed-subscribe .svg-icon {
@@ -835,56 +662,24 @@ table {
 
 .footer-col-wrapper,
 .social-links {
-  @include relative-font-size(0.9375);
+  font-size: 0.9375rem;//@include relative-font-size(0.9375);
   color: $brand-color;
 }
 
 .footer-col {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: $spacing-unit-half;
 }
 
-.footer-col-1,
+.footer-col-1 {
+  width: var(--minima-footer-col1-width);
+}
+
 .footer-col-2 {
-  width: calc(50% - (#{$spacing-unit} / 2));
+  width: var(--minima-footer-col2-width);
 }
 
 .footer-col-3 {
-  width: calc(100% - (#{$spacing-unit} / 2));
-}
-
-@media screen and (min-width: $on-large) {
-  .footer-col-1 {
-    width: calc(35% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-2 {
-    width: calc(20% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: calc(45% - (#{$spacing-unit} / 2));
-  }
-}
-
-@media screen and (min-width: $on-medium) {
-  .footer-col-wrapper {
-    display: flex
-  }
-
-  .footer-col {
-    width: calc(100% - (#{$spacing-unit} / 2));
-    padding: 0 ($spacing-unit * .5);
-
-    &:first-child {
-      padding-right: $spacing-unit * .5;
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-      padding-left: $spacing-unit * .5;
-    }
-  }
+  width: var(--minima-footer-col3-width);
 }
 
 
@@ -898,11 +693,11 @@ table {
 }
 
 .page-heading {
-  @include relative-font-size(2);
+  font-size: 2rem;//@include relative-font-size(2);
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  font-size: 1.75rem;//@include relative-font-size(1.75);
 }
 
 .post-list {
@@ -921,7 +716,7 @@ table {
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  font-size: 1.5rem;//@include relative-font-size(1.5);
 }
 
 
@@ -935,13 +730,9 @@ table {
 
 .post-title,
 .post-content h1 {
-  @include relative-font-size(2.625);
+  font-size: var(--minima-post-content-h1-font-size);//@include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1.15;
-
-  @media screen and (min-width: $on-large) {
-    @include relative-font-size(2.625);
-  }
 }
 
 .post-content {
@@ -950,30 +741,22 @@ table {
   h1, h2, h3, h4, h5, h6 { margin-top: $spacing-unit }
 
   h2 {
-    @include relative-font-size(1.75);
-
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(2);
-    }
+    font-size: var(--minima-post-content-h2-font-size);//@include relative-font-size(1.75);
   }
 
   h3 {
-    @include relative-font-size(1.375);
-
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(1.625);
-    }
+    font-size: var(--minima-post-content-h3-font-size); 1.375rem;//@include relative-font-size(1.375);
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    font-size: 1.25rem;//@include relative-font-size(1.25);
   }
 
   h5 {
-    @include relative-font-size(1.125);
+    font-size: 1.125rem;//@include relative-font-size(1.125);
   }
   h6 {
-    @include relative-font-size(1.0625);
+    font-size: 1.0625rem;//@include relative-font-size(1.0625);
   }
 }
 
@@ -1010,7 +793,7 @@ table {
     }
     div {
       display: block;
-      padding: $spacing-unit * .25;
+      padding: $spacing-unit-quat;
       border: 1px solid transparent;
 
       &.pager-edge {
@@ -1026,10 +809,7 @@ table {
 /**
  * Grid helpers
  */
-@media screen and (min-width: $on-large) {
-  .one-half {
-    width: calc(50% - (#{$spacing-unit} / 2));
-  }
-}
+
+.one-half { width: var(--minima-one-half-width) }
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
