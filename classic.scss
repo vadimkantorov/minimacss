@@ -745,7 +745,7 @@ table {
   }
 
   h3 {
-    font-size: var(--minima-post-content-h3-font-size); 1.375rem;//@include relative-font-size(1.375);
+    font-size: var(--minima-post-content-h3-font-size);//@include relative-font-size(1.375);
   }
 
   h4 {
