@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+//////////////colorskinbegin//////////////////////////
+
 // Light mode
 // ----------
 
@@ -51,35 +53,6 @@
     --minima-spacing-unit: 30px ;
     --minima-table-text-align: left ;
 }
-
-$base-font-family: var(--minima-base-font-family);
-$code-font-family: var(--minima-code-font-family);
-$base-font-size:   var(--minima-base-font-size); 
-$base-font-weight: var(--minima-base-font-weight); 
-$small-font-size:  var(--minima-small-font-size);
-$base-line-height: var(--minima-base-line-height);
-$spacing-unit:     var(--minima-spacing-unit);
-$table-text-align: var(--minima-table-text-align);
-
-
-$brand-color: var(--minima-brand-color);
-$brand-color-light: var(--minima-brand-color-light);
-$brand-color-dark: var(--minima-brand-color-dark);
-$site-title-color: var(--minima-site-title-color);
-$text-color: var(--minima-text-color);
-$background-color: var(--minima-background-color);
-$code-background-color: var(--minima-code-background-color);
-$link-base-color: var(--minima-link-base-color);
-$link-visited-color: var(--minima-link-visited-color);
-$link-hover-color: var(--minima-link-hover-color);
-$border-color-01: var(--minima-border-color-01);
-$border-color-02: var(--minima-border-color-02);
-$border-color-03: var(--minima-border-color-03);
-$table-text-color: var(--minima-table-text-color);
-$table-zebra-color: var(--minima-table-zebra-color);
-$table-header-bg-color: var(--minima-table-header-bg-color);
-$table-header-border: var(--minima-table-header-border);
-$table-border-color: var(--minima-table-border-color);
 
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
@@ -147,6 +120,14 @@ $table-border-color: var(--minima-table-border-color);
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
 
+//////////////colorskinend//////////////////////////
+
+
+
+
+
+
+
 :root {
     --minima-content-width: 800px;
 }
@@ -189,17 +170,17 @@ $table-border-color: var(--minima-table-border-color);
   }
 
   .footer-col {
-    width: calc(100% - (#{$spacing-unit} / 2 ));
-    padding: 0 ($spacing-unit * .5);
+    width: calc(100% - (var(--minima-spacing-unit) / 2 ));
+    padding: 0 (calc(var(--minima-spacing-unit) * .5));
 
     &:first-child {
-      padding-right: $spacing-unit * .5;
+      padding-right: calc(var(--minima-spacing-unit) * .5);
       padding-left: 0;
     }
 
     &:last-child {
       padding-right: 0;
-      padding-left: $spacing-unit * .5;
+      padding-left: calc(var(--minima-spacing-unit) * .5);
     }
   }
 //}
@@ -207,32 +188,32 @@ $table-border-color: var(--minima-table-border-color);
 }
 
 :root {
-  --minima-wrapper-max-width: calc( var(--minima-content-width) - (#{$spacing-unit}));
-  --minima-wrapper-padding-left-right: $spacing-unit * .5;
+  --minima-wrapper-max-width: calc( var(--minima-content-width) - (var(--minima-spacing-unit)));
+  --minima-wrapper-padding-left-right: calc(var(--minima-spacing-unit) * .5);
   
   --minima-post-content-h1-font-size: 2.625rem;
   --minima-post-content-h2-font-size: 1.75rem;
   --minima-post-content-h3-font-size: 1.375rem;
 
-  --minima-footer-col1-width: calc(50% - (#{$spacing-unit} / 2));
-  --minima-footer-col2-width: calc(50% - (#{$spacing-unit} / 2));
-  --minima-footer-col3-width: calc(50% - (#{$spacing-unit} / 2));
+  --minima-footer-col1-width: calc(50% - (var(--minima-spacing-unit) / 2));
+  --minima-footer-col2-width: calc(50% - (var(--minima-spacing-unit) / 2));
+  --minima-footer-col3-width: calc(50% - (var(--minima-spacing-unit) / 2));
 }
 
 @media screen and (min-width: 800px) { //on-large
 :root{
-    --minima-wrapper-max-width: calc( var(--minima-content-width) - (#{$spacing-unit} * 2));
-    --minima-wrapper-padding-left-right: $spacing-unit;
+    --minima-wrapper-max-width: calc( var(--minima-content-width) - (var(--minima-spacing-unit) * 2));
+    --minima-wrapper-padding-left-right: var(--minima-spacing-unit);
     
-    --minima-one-half-width: calc(50% - (#{$spacing-unit} / 2 ));
+    --minima-one-half-width: calc(50% - (var(--minima-spacing-unit) / 2 ));
   
     --minima-post-content-h1-font-size: 2.625rem;
     --minima-post-content-h2-font-size: 2rem;
     --minima-post-content-h3-font-size: 1.625rem;
 
-    --minima-footer-col1-width: calc(35% - (#{$spacing-unit} / 2));
-    --minima-footer-col1-width: calc(20% - (#{$spacing-unit} / 2 ));
-    --minima-footer-col1-width: calc(45% - (#{$spacing-unit} / 2 ));
+    --minima-footer-col1-width: calc(35% - (var(--minima-spacing-unit) / 2));
+    --minima-footer-col1-width: calc(20% - (var(--minima-spacing-unit) / 2 ));
+    --minima-footer-col1-width: calc(45% - (var(--minima-spacing-unit) / 2 ));
 
   }
 }
@@ -276,7 +257,7 @@ $table-border-color: var(--minima-table-border-color);
 
 // Placeholder to allow overriding predefined variables smoothly.
 html {
-  font-size: $base-font-size;
+  font-size: var(--minima-base-font-size);
 }
 
 /**
@@ -296,9 +277,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  font: var(--minima-base-font-weight) var(--minima-base-font-size)/var(--minima-base-line-height) var(--minima-base-font-family);
+  color: var(--minima-text-color);
+  background-color: var(--minima-background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -320,12 +301,12 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: calc(var(--minima-spacing-unit) * .5);
 }
 
 hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: var(--minima-spacing-unit);
+  margin-bottom: var(--minima-spacing-unit);
 }
 
 /**
@@ -355,7 +336,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: var(--minima-small-font-size);
 }
 
 
@@ -364,7 +345,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: var(--minima-spacing-unit);
 }
 
 li {
@@ -380,7 +361,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: var(--minima-base-font-weight);
 }
 
 
@@ -389,15 +370,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $link-base-color;
+  color: var(--minima-link-base-color);
   text-decoration: none;
 
   &:visited {
-    color: $link-visited-color;
+    color: var(--minima-link-visited-color);
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: var(--minima-link-hover-color);
     text-decoration: underline;
   }
 
@@ -415,9 +396,9 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * .5;
+  color: var(--minima-brand-color);
+  border-left: 4px solid var(--minima-border-color-01);
+  padding-left: calc(var(--minima-spacing-unit) * .5);
   font-size: 1.125rem;//@include relative-font-size(1.125);
   font-style: italic;
 
@@ -437,11 +418,11 @@ blockquote {
  */
 pre,
 code {
-  font-family: $code-font-family;
+  font-family: var(--minima-code-font-family);
   font-size: 0.9375em;
-  border: 1px solid $border-color-01;
+  border: 1px solid var(--minima-border-color-01);
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: var(--minima-code-background-color);
 }
 
 code {
@@ -461,11 +442,11 @@ pre {
 
 .highlight {
   border-radius: 3px;
-  background: $code-background-color;
+  background: var(--minima-code-background-color);
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $code-background-color;
+    background: var(--minima-code-background-color);
   }
 }
 
@@ -519,26 +500,26 @@ pre {
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: var(--minima-spacing-unit);
   width: 100%;
-  text-align: $table-text-align;
-  color: $table-text-color;
+  text-align: var(--minima-table-text-align);
+  color: var(--minima-table-text-color);
   border-collapse: collapse;
-  border: 1px solid $table-border-color;
+  border: 1px solid var(--minima-table-border-color);
   tr {
     &:nth-child(even) {
-      background-color: $table-zebra-color;
+      background-color: var(--minima-table-zebra-color);
     }
   }
   th, td {
-    padding: (calc(#{$spacing-unit} * 33.3333333333 * .01)) ($spacing-unit * .5);
+    padding: (calc(var(--minima-spacing-unit) * 33.3333333333 * .01)) (calc(var(--minima-spacing-unit) * .5));
   }
   th {
-    background-color: $table-header-bg-color;
-    border: 1px solid $table-header-border;
+    background-color: var(--minima-table-header-bg-color);
+    border: 1px solid var(--minima-table-header-border);
   }
   td {
-    border: 1px solid $table-border-color;
+    border: 1px solid var(--minima-table-border-color);
   }
 
   display: var(--minima-table-display);
@@ -555,10 +536,10 @@ table {
  * Site header
  */
 .site-header {
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
-  min-height: calc(#{$spacing-unit} * 1.865);
-  line-height: calc(#{$base-line-height} * #{$base-font-size} * 2.25);
+  border-top: 5px solid var(--minima-border-color-03);
+  border-bottom: 1px solid var(--minima-border-color-01);
+  min-height: calc(var(--minima-spacing-unit) * 1.865);
+  line-height: calc(var(--minima-base-line-height) * var(--minima-base-font-size) * 2.25);
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -575,16 +556,16 @@ table {
 
   &,
   &:visited {
-    color: $site-title-color;
+    color: var(--minima-site-title-color);
   }
 }
 
 .site-nav {
   position: absolute;
   top: 9px;
-  right: $spacing-unit * .5;
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
+  right: calc(var(--minima-spacing-unit) * .5);
+  background-color: var(--minima-background-color);
+  border: 1px solid var(--minima-border-color-01);
   border-radius: 5px;
   text-align: right;
 
@@ -601,7 +582,7 @@ table {
     text-align: center;
 
     > svg path {
-      fill: $border-color-03;
+      fill: var(--minima-border-color-03);
     }
   }
 
@@ -625,8 +606,8 @@ table {
   }
 
   .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
+    color: var(--minima-text-color);
+    line-height: var(--minima-base-line-height);
     display: block;
     padding: 5px 10px;
 
@@ -645,13 +626,13 @@ table {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
+  border-top: 1px solid var(--minima-border-color-01);
+  padding: var(--minima-spacing-unit) 0;
 }
 
 .footer-heading {
   font-size: 1.125rem;//@include relative-font-size(1.125);
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: calc(var(--minima-spacing-unit) * .5);
 }
 
 .feed-subscribe .svg-icon {
@@ -667,11 +648,11 @@ table {
 .footer-col-wrapper,
 .social-links {
   font-size: 0.9375rem;//@include relative-font-size(0.9375);
-  color: $brand-color;
+  color: var(--minima-brand-color);
 }
 
 .footer-col {
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: calc(var(--minima-spacing-unit) * .5);
 }
 
 .footer-col-1 {
@@ -692,7 +673,7 @@ table {
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: var(--minima-spacing-unit) 0;
   flex: 1 0 auto;
 }
 
@@ -709,13 +690,13 @@ table {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: var(--minima-spacing-unit);
   }
 }
 
 .post-meta {
-  font-size: $small-font-size;
-  color: $brand-color;
+  font-size: var(--minima-small-font-size);
+  color: var(--minima-brand-color);
 }
 
 .post-link {
@@ -729,7 +710,7 @@ table {
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: var(--minima-spacing-unit);
 }
 
 .post-title,
@@ -740,9 +721,9 @@ table {
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: var(--minima-spacing-unit);
 
-  h1, h2, h3, h4, h5, h6 { margin-top: $spacing-unit }
+  h1, h2, h3, h4, h5, h6 { margin-top: var(--minima-spacing-unit) }
 
   h2 {
     font-size: var(--minima-post-content-h2-font-size);//@include relative-font-size(1.75);
@@ -775,8 +756,8 @@ table {
     a {
       display: block;
       padding: 10px 12px;
-      border: 1px solid $border-color-01;
-      &:hover { border-color: $border-color-02 }
+      border: 1px solid var(--minima-border-color-01);
+      &:hover { border-color: var(--minima-border-color-02) }
     }
   }
 }
@@ -787,7 +768,7 @@ table {
  * Pagination navbar
  */
 .pagination {
-  margin-bottom: $spacing-unit;
+  margin-bottom: var(--minima-spacing-unit);
   @extend .social-media-list;
   li {
     a, div {
@@ -797,11 +778,11 @@ table {
     }
     div {
       display: block;
-      padding: $spacing-unit * .25;
+      padding: calc(var(--minima-spacing-unit) * .25);
       border: 1px solid transparent;
 
       &.pager-edge {
-        color: $border-color-01;
+        color: var(--minima-border-color-01);
         border: 1px dashed;
       }
     }
