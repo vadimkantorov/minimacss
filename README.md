@@ -5,7 +5,7 @@ Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de9
 
 ```shell
 # install https://sass.github.io/libsass-python/
-python -m pip install libsass
+python -m pip install libsass --user
 
 # git clone https://github.com/jekyll/minima; pushd minima/_sass; git checkout 10124515953527c8990a2de99ae4ddb2a81ffee3; python -c "import sass;print(sass.compile(string='@import \'minima/skins/classic\',\'minima/initialize\''))" > ../../naiveclassic.css; popd;
 
@@ -16,7 +16,10 @@ python -c "import sass;print(sass.compile(string='@import \'naiveautoamalgamated
 python -c "import sass;print(sass.compile(string='@import \'naiveclassicamalgamated.scss\''))" > naiveclassicamalgamated.css
 python -c "import sass;print(sass.compile(string='@import \'naivedarkamalgamated.scss\''))" > naivedarkamalgamated.css
 
-# similar to naiveclassic.scss, classic.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/classic.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
+# similar to naiveclassic.scss, auto.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
+python3 -c "import sass;print(sass.compile(string='@import \'auto.scss\''))" > auto.css
+python3 -c "import sass;print('\$colorscheme: \"light\"; @import \'auto.scss\'')" > light.css
+python3 -c "import sass;print(sass.compile(string='\$colorscheme: \"dark\" ; @import \'auto.scss\''))" > dark.css
 
 # compile classic.scss
 python -c "import sass;print(sass.compile(string='@import \'classic.scss\''))" > classic.css

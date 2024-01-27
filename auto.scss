@@ -1,6 +1,23 @@
 @charset "utf-8";
 
-@media (prefers-color-scheme: light) {
+$colorscheme: "auto" !default;
+
+$falsemediaquery: 1000000px;
+$truemediaquery: 0px;
+
+$forcelight: $falsemediaquery;
+$forcedark: $falsemediaquery;
+
+@if $colorscheme == "light" {
+    $forcelight: $truemediaquery;
+    $forcedark: $falsemediaquery;
+}
+@if $colorscheme == "dark" {
+    $forcelight: $falsemediaquery;
+    $forcedark: $truemediaquery;
+}
+
+@media (prefers-color-scheme: light) and (max-width: $forcedark), (min-width: $forcelight)  {
     :root {
         --minima-brand-color:                       var(--minima-light-brand-color);
         --minima-brand-color-light:                 var(--minima-light-brand-color-light);
@@ -99,7 +116,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (max-width: $forcelight), (min-width: $forcedark) {
     :root {
         --minima-brand-color:                       var(--minima-dark-brand-color);
         --minima-brand-color-light:                 var(--minima-dark-brand-color-light);
