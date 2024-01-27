@@ -8,5 +8,5 @@ jobs:
         with:
           submodules: recursive
       - run: |
-        python -m pip install libsass --user
-        make auto.css classic.css dark.css
+          python -m pip install libsass --user
+          make auto.css classic.css dark.css
