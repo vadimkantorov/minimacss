@@ -12,14 +12,10 @@ python -m pip install libsass --user
 cat ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naiveautoamalgamated.scss
 cat ./minima/_sass/minima/skins/classic.scss ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naiveclassicamalgamated.scss
 cat ./minima/_sass/minima/skins/dark.scss ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naivedarkamalgamated.scss
-python -c "import sass;print(sass.compile(string='@import \'naiveautoamalgamated.scss\''))" > naiveautoamalgamated.css
-python -c "import sass;print(sass.compile(string='@import \'naiveclassicamalgamated.scss\''))" > naiveclassicamalgamated.css
-python -c "import sass;print(sass.compile(string='@import \'naivedarkamalgamated.scss\''))" > naivedarkamalgamated.css
+make naiveautoamalgamated.css naiveclassicamalgamated.css naivedarkamalgamated.css
 
 # similar to naiveclassic.scss, auto.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
-python3 -c "import sass;print(sass.compile(string='@import \'auto.scss\''))" > auto.css
-python3 -c "import sass;print('\$colorscheme: \"light\"; @import \'auto.scss\'')" > light.css
-python3 -c "import sass;print(sass.compile(string='\$colorscheme: \"dark\" ; @import \'auto.scss\''))" > dark.css
+make auto.css classic.css dark.css
 
 # compile classic.scss
 python -c "import sass;print(sass.compile(string='@import \'classic.scss\''))" > classic.css
