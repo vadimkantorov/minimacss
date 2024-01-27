@@ -3,10 +3,10 @@ on: workflow_dispatch
 jobs:
   makecss:
     runs-on: ubuntu-20.04
-    - uses: actions/checkout@v4
-      with:
-        submodules: recursive
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - run: |
         python -m pip install libsass --user
         make auto.css classic.css dark.css
