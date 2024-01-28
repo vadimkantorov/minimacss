@@ -3,6 +3,8 @@ Compiled SASS styles from https://github.com/jekyll/minima for use "as is" in CS
 
 Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de99ae4ddb2a81ffee3 from Nov 17, 2023
 
+See the zip-ball in the release https://github.com/vadimkantorov/minimacss/releases/tag/cssrelease to download all the produced CSS files.
+
 ```shell
 # install https://sass.github.io/libsass-python/
 python -m pip install libsass --user
