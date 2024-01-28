@@ -1,5 +1,5 @@
 # minimacss
-Compiled SASS styles from https://github.com/jekyll/minima for use "as is" in CSS-only, NPM-less small static website projects
+Compiled SASS styles from https://github.com/jekyll/minima for use "as is" in CSS-only, NPM-less small static website projects. All color variables are turned into CSS variables, allowing for modification without rerunning SASS.
 
 Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de99ae4ddb2a81ffee3 from Nov 17, 2023
 
@@ -7,15 +7,13 @@ Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de9
 # install https://sass.github.io/libsass-python/
 python -m pip install libsass --user
 # python -c "import sass;print(sass.compile(string='\$colorscheme:\"light\";@import\'auto.scss\''))" > classic.css # see Makefile for all others
+# cd ./minima/_sass; python -c "import sass;print(sass.compile(string='@import \'minima/skins/classic\',\'minima/initialize\''))" > ../../minima_classic.css
 
-# git clone https://github.com/jekyll/minima; pushd minima/_sass; git checkout 10124515953527c8990a2de99ae4ddb2a81ffee3; python -c "import sass;print(sass.compile(string='@import \'minima/skins/classic\',\'minima/initialize\''))" > ../../naiveclassic.css; popd;
+make amalgamated/auto.scss amalgamated/solarized.scss amalgamated/classic.scss amalgamated/dark.scss amalgamated/solarized-light.scss amalgamated/solarized-dark.scss
+make amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
 
-cat ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naiveautoamalgamated.scss
-cat ./minima/_sass/minima/skins/classic.scss ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naiveclassicamalgamated.scss
-cat ./minima/_sass/minima/skins/dark.scss ./minima/_sass/minima/skins/auto.scss ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > naivedarkamalgamated.scss
-make naiveautoamalgamated.css naiveclassicamalgamated.css naivedarkamalgamated.css
+# i made auto.scss / solaried.scss and custom-variables_base_layout_custom-styles.scss by manual amalgamation and fixes of ./minima./assets/css/style.scss -> ./minima/_sass/minima/skins/auto.scss -> ./minima/_sass/minima/initialize.scss -> ./minima/_sass/minima/custom-variables.scss -> ./minima/_sass/minima/_base.scss -> ./minima/_sass/minima/_layout.scss -> ./minima/_sass/minima/custom-styles.scss
 
-# similar to naiveclassic.scss, auto.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
 make auto.css classic.css dark.css PYTHON=python
 make solarized.css solarized-light.css solarized-dark.css PYTHON=python
 ```
