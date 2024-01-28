@@ -23,7 +23,7 @@ amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/so
 	$(PYTHON) -c "import sass;print(sass.compile(string='@import \'$(basename $@).scss\''))" > $@
 auto.css solarized.css:
 	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"auto\" ; @import \'$(basename $@).scss\''))" > $@
-classic.css solarized-light.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'$(basename $@).scss\''))" > $@
-dark.css solarized-dark.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\" ; @import \'$(basename $@).scss\''))" > $@
+classic.css dark.css: auto.scss
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'$<.scss\''))" > $@
+solarized-light.css solarized-dark.css: solarized.scss
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\" ; @import \'$<.scss\''))" > $@
