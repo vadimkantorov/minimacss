@@ -10,12 +10,12 @@ jobs:
       - name: Compile CSS
         run: |
           python -m pip install libsass --user
-          make naiveautoamalgamated.css naiveclassicamalgamated.css naivedarkamalgamated.css naivesolarizedamalgamated.css naivesolarizedlightamalgamated.css naivesolarizeddarkamalgamated.css
-          make auto.css classic.css dark.css
-          make solarized.css solarized-light.css solarized-dark.css 
+          make amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
+          make auto.css classic.css dark.css solarized.css solarized-light.css solarized-dark.css 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build
           path: |
+            amalgamated/*.css
             *.css
