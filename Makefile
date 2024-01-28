@@ -22,8 +22,8 @@ amalgamated/solarized-dark.scss: amalgamated/solarized.scss minima
 amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css: 
 	$(PYTHON) -c "import sass;print(sass.compile(string='@import \'$(basename $@).scss\''))" > $@
 auto.css solarized.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"auto\" ; @import \'$(basename $@).scss\''))" > $@
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"auto\" ; @import \'$@\''))" > $@
 classic.css dark.css: auto.scss
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'$<.scss\''))" > $@
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'$<\''))" > $@
 solarized-light.css solarized-dark.css: solarized.scss
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\" ; @import \'$<.scss\''))" > $@
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\" ; @import \'$<\''))" > $@
