@@ -42,7 +42,7 @@ dark.css:
 	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\"; @import \'auto.scss\''))" > $@
 solarized.css:
 	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"auto\"; @import \'solarized.scss\''))" > $@
-solarizedlight.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'solarizedlight.scss\''))" > $@
-solarizeddark.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\"; @import \'solarizeddark.scss\''))" > $@
+solarized-light.css:
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'solarized.scss\''))" > $@
+solarized-dark.css:
+	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\"; @import \'solarized.scss\''))" > $@

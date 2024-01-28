@@ -283,227 +283,228 @@ $forcedark: $falsemediaquery;
     --minima-dark-table-border-color:    var(--minima-dark-border-color-01);
 }
 
-
+/*
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // ----------------------------------------------------------------------------
+*/
 
 /* .lm-highlight */
 :root {
-  --minima-light-highlight-c-color: #998;  // Comment
-  --minima-light-highlight-c-font-style: italic ; // Comment
-  --minima-light-highlight-err-color: #a61717; // Error
-  --minima-light-highlight-err-background-color: #e3d2d2 ; // Error
-  --minima-light-highlight-k-font-weight: bold ; // Keyword
-  --minima-light-highlight-o-font-weight: bold ; // Operator
-  --minima-light-highlight-cm-color: #998;  // Comment.Multiline
-  --minima-light-highlight-cm-font-style: italic ; // Comment.Multiline
-  --minima-light-highlight-cp-color: #999;  // Comment.Preproc
-  --minima-light-highlight-cp-font-weight: bold ; // Comment.Preproc
-  --minima-light-highlight-c1-color: #998;  // Comment.Single
-  --minima-light-highlight-c1-font-style: italic ; // Comment.Single
-  --minima-light-highlight-cs-color: #999;  // Comment.Special
-  --minima-light-highlight-cs-font-weight: bold;  // Comment.Special
-  --minima-light-highlight-cs-font-style: italic ; // Comment.Special
-  --minima-light-highlight-gd-color: #000;  // Generic.Deleted
-  --minima-light-highlight-gd-background-color: #fdd ; // Generic.Deleted
-  --minima-light-highlight-gdx-color: #000;  // Generic.Deleted.Specific
-  --minima-light-highlight-gdx-background-color: #faa ; // Generic.Deleted.Specific
-  --minima-light-highlight-ge-font-style: italic ; // Generic.Emph
-  --minima-light-highlight-gr-color: #a00 ; // Generic.Error
-  --minima-light-highlight-gh-color: #999 ; // Generic.Heading
-  --minima-light-highlight-gi-color: #000;  // Generic.Inserted
-  --minima-light-highlight-gi-background-color: #dfd ; // Generic.Inserted
-  --minima-light-highlight-gix-color: #000;  // Generic.Inserted.Specific
-  --minima-light-highlight-gix-background-color: #afa ; // Generic.Inserted.Specific
-  --minima-light-highlight-go-color: #888 ; // Generic.Output
-  --minima-light-highlight-gp-color: #555 ; // Generic.Prompt
-  --minima-light-highlight-gs-font-weight: bold ; // Generic.Strong
-  --minima-light-highlight-gu-color: #aaa ; // Generic.Subheading
-  --minima-light-highlight-gt-color: #a00 ; // Generic.Traceback
-  --minima-light-highlight-kc-font-weight: bold ; // Keyword.Constant
-  --minima-light-highlight-kd-font-weight: bold ; // Keyword.Declaration
-  --minima-light-highlight-kp-font-weight: bold ; // Keyword.Pseudo
-  --minima-light-highlight-kr-font-weight: bold ; // Keyword.Reserved
-  --minima-light-highlight-kt-color: #458; // Keyword.Type 
-  --minima-light-highlight-kt-font-weight: bold ; // Keyword.Type
-  --minima-light-highlight-m-color : #099 ; // Literal.Number
-  --minima-light-highlight-s-color : #d14 ; // Literal.String
-  --minima-light-highlight-na-color: #008080 ; // Name.Attribute
-  --minima-light-highlight-nb-color: #0086B3 ; // Name.Builtin
-  --minima-light-highlight-nc-color: #458; // Name.Class
-  --minima-light-highlight-nc-font-weight: bold ; // Name.Class
-  --minima-light-highlight-no-color: #008080 ; // Name.Constant
-  --minima-light-highlight-ni-color: #800080 ; // Name.Entity
-  --minima-light-highlight-ne-color: #900;  // Name.Exception
-  --minima-light-highlight-ne-font-weight: bold ; // Name.Exception
-  --minima-light-highlight-nf-color: #900;  // Name.Function
-  --minima-light-highlight-nf-font-weight: bold ; // Name.Function
-  --minima-light-highlight-nn-color: #555; // Name.Namespace
-  --minima-light-highlight-nt-color: #000080; // Name.Tag
-  --minima-light-highlight-nv-color: #008080; // Name.Variable
-  --minima-light-highlight-ow-font-weight: bold ; // Operator.Word
-  --minima-light-highlight-w-color : #bbb;  // Text.Whitespace
-  --minima-light-highlight-mf-color: #099;  // Literal.Number.Float
-  --minima-light-highlight-mh-color: #099;  // Literal.Number.Hex
-  --minima-light-highlight-mi-color: #099;  // Literal.Number.Integer
-  --minima-light-highlight-mo-color: #099;  // Literal.Number.Oct
-  --minima-light-highlight-sb-color: #d14;  // Literal.String.Backtick
-  --minima-light-highlight-sc-color: #d14;  // Literal.String.Char
-  --minima-light-highlight-sd-color: #d14;  // Literal.String.Doc
-  --minima-light-highlight-s2-color: #d14;  // Literal.String.Double
-  --minima-light-highlight-se-color: #d14;  // Literal.String.Escape
-  --minima-light-highlight-sh-color: #d14;  // Literal.String.Heredoc
-  --minima-light-highlight-si-color: #d14;  // Literal.String.Interpol
-  --minima-light-highlight-sx-color: #d14;  // Literal.String.Other
-  --minima-light-highlight-sr-color: #009926; // Literal.String.Regex
-  --minima-light-highlight-s1-color: #d14; // Literal.String.Single
-  --minima-light-highlight-ss-color: #990073; // Literal.String.Symbol
-  --minima-light-highlight-bp-color: #999; // Name.Builtin.Pseudo
-  --minima-light-highlight-vc-color: #008080; // Name.Variable.Class
-  --minima-light-highlight-vg-color: #008080; // Name.Variable.Global
-  --minima-light-highlight-vi-color: #008080; // Name.Variable.Instance
-  --minima-light-highlight-il-color: #099; // Literal.Number.Integer.Long
+  --minima-light-highlight-c-color: #998;  /*Comment*/
+  --minima-light-highlight-c-font-style: italic ; /*Comment*/
+  --minima-light-highlight-err-color: #a61717; /*Error*/
+  --minima-light-highlight-err-background-color: #e3d2d2 ; /*Error*/
+  --minima-light-highlight-k-font-weight: bold ; /*Keyword*/
+  --minima-light-highlight-o-font-weight: bold ; /*Operator*/
+  --minima-light-highlight-cm-color: #998;  /*Comment.Multiline*/
+  --minima-light-highlight-cm-font-style: italic ; /*Comment.Multiline*/
+  --minima-light-highlight-cp-color: #999;  /*Comment.Preproc*/
+  --minima-light-highlight-cp-font-weight: bold ; /*Comment.Preproc*/
+  --minima-light-highlight-c1-color: #998;  /*Comment.Single*/
+  --minima-light-highlight-c1-font-style: italic ; /*Comment.Single*/
+  --minima-light-highlight-cs-color: #999;  /*Comment.Special*/
+  --minima-light-highlight-cs-font-weight: bold;  /*Comment.Special*/
+  --minima-light-highlight-cs-font-style: italic ; /*Comment.Special*/
+  --minima-light-highlight-gd-color: #000;  /*Generic.Deleted*/
+  --minima-light-highlight-gd-background-color: #fdd ; /*Generic.Deleted*/
+  --minima-light-highlight-gdx-color: #000;  /*Generic.Deleted.Specific*/
+  --minima-light-highlight-gdx-background-color: #faa ; /*Generic.Deleted.Specific*/
+  --minima-light-highlight-ge-font-style: italic ; /*Generic.Emph*/
+  --minima-light-highlight-gr-color: #a00 ; /*Generic.Error*/
+  --minima-light-highlight-gh-color: #999 ; /*Generic.Heading*/
+  --minima-light-highlight-gi-color: #000;  /*Generic.Inserted*/
+  --minima-light-highlight-gi-background-color: #dfd ; /*Generic.Inserted*/
+  --minima-light-highlight-gix-color: #000;  /*Generic.Inserted.Specific*/
+  --minima-light-highlight-gix-background-color: #afa ; /*Generic.Inserted.Specific*/
+  --minima-light-highlight-go-color: #888 ; /*Generic.Output*/
+  --minima-light-highlight-gp-color: #555 ; /*Generic.Prompt*/
+  --minima-light-highlight-gs-font-weight: bold ; /*Generic.Strong*/
+  --minima-light-highlight-gu-color: #aaa ; /*Generic.Subheading*/
+  --minima-light-highlight-gt-color: #a00 ; /*Generic.Traceback*/
+  --minima-light-highlight-kc-font-weight: bold ; /*Keyword.Constant*/
+  --minima-light-highlight-kd-font-weight: bold ; /*Keyword.Declaration*/
+  --minima-light-highlight-kp-font-weight: bold ; /*Keyword.Pseudo*/
+  --minima-light-highlight-kr-font-weight: bold ; /*Keyword.Reserved*/
+  --minima-light-highlight-kt-color: #458; /*Keyword.Type */
+  --minima-light-highlight-kt-font-weight: bold ; /*Keyword.Type*/
+  --minima-light-highlight-m-color : #099 ; /*Literal.Number*/
+  --minima-light-highlight-s-color : #d14 ; /*Literal.String*/
+  --minima-light-highlight-na-color: #008080 ; /*Name.Attribute*/
+  --minima-light-highlight-nb-color: #0086B3 ; /*Name.Builtin*/
+  --minima-light-highlight-nc-color: #458; /*Name.Class*/
+  --minima-light-highlight-nc-font-weight: bold ; /*Name.Class*/
+  --minima-light-highlight-no-color: #008080 ; /*Name.Constant*/
+  --minima-light-highlight-ni-color: #800080 ; /*Name.Entity*/
+  --minima-light-highlight-ne-color: #900;  /*Name.Exception*/
+  --minima-light-highlight-ne-font-weight: bold ; /*Name.Exception*/
+  --minima-light-highlight-nf-color: #900;  /*Name.Function*/
+  --minima-light-highlight-nf-font-weight: bold ; /*Name.Function*/
+  --minima-light-highlight-nn-color: #555; /*Name.Namespace*/
+  --minima-light-highlight-nt-color: #000080; /*Name.Tag*/
+  --minima-light-highlight-nv-color: #008080; /*Name.Variable*/
+  --minima-light-highlight-ow-font-weight: bold ; /*Operator.Word*/
+  --minima-light-highlight-w-color : #bbb;  /*Text.Whitespace*/
+  --minima-light-highlight-mf-color: #099;  /*Literal.Number.Float*/
+  --minima-light-highlight-mh-color: #099;  /*Literal.Number.Hex*/
+  --minima-light-highlight-mi-color: #099;  /*Literal.Number.Integer*/
+  --minima-light-highlight-mo-color: #099;  /*Literal.Number.Oct*/
+  --minima-light-highlight-sb-color: #d14;  /*Literal.String.Backtick*/
+  --minima-light-highlight-sc-color: #d14;  /*Literal.String.Char*/
+  --minima-light-highlight-sd-color: #d14;  /*Literal.String.Doc*/
+  --minima-light-highlight-s2-color: #d14;  /*Literal.String.Double*/
+  --minima-light-highlight-se-color: #d14;  /*Literal.String.Escape*/
+  --minima-light-highlight-sh-color: #d14;  /*Literal.String.Heredoc*/
+  --minima-light-highlight-si-color: #d14;  /*Literal.String.Interpol*/
+  --minima-light-highlight-sx-color: #d14;  /*Literal.String.Other*/
+  --minima-light-highlight-sr-color: #009926; /*Literal.String.Regex*/
+  --minima-light-highlight-s1-color: #d14; /*Literal.String.Single*/
+  --minima-light-highlight-ss-color: #990073; /*Literal.String.Symbol*/
+  --minima-light-highlight-bp-color: #999; /*Name.Builtin.Pseudo*/
+  --minima-light-highlight-vc-color: #008080; /*Name.Variable.Class*/
+  --minima-light-highlight-vg-color: #008080; /*Name.Variable.Global*/
+  --minima-light-highlight-vi-color: #008080; /*Name.Variable.Instance*/
+  --minima-light-highlight-il-color: #099; /*Literal.Number.Integer.Long*/
 }
 
 /* .dm-highlight */
 :root {
-  --minima-dark-highlight-c-color: #545454; // Comment
-  --minima-dark-highlight-c-font-style: italic ; // Comment
-  --minima-dark-highlight-err-color: #f07178; // Error
-  --minima-dark-highlight-err-background-color: #e3d2d2 ; // Error
-  --minima-dark-highlight-k-color: #89DDFF; // Keyword
-  --minima-dark-highlight-k-font-weight: bold ; // Keyword
-  --minima-dark-highlight-o-font-weight: bold ; // Operator
-  --minima-dark-highlight-cm-color: #545454; // Comment.Multiline
-  --minima-dark-highlight-cm-font-style: italic ; // Comment.Multiline
-  --minima-dark-highlight-cp-color: #545454;  // Comment.Preproc
-  --minima-dark-highlight-cp-font-weight: bold ; // Comment.Preproc
-  --minima-dark-highlight-c1-color: #545454; // Comment.Single
-  --minima-dark-highlight-c1-font-style: italic ; // Comment.Single
-  --minima-dark-highlight-cs-color: #545454; // Comment.Special
-  --minima-dark-highlight-cs-font-weight: bold; // Comment.Special
-  --minima-dark-highlight-cs-font-style: italic ; // Comment.Special
-  --minima-dark-highlight-gd-color: #000; // Generic.Deleted
-  --minima-dark-highlight-gd-background-color: #fdd;  // Generic.Deleted
-  --minima-dark-highlight-gdx-color: #000;  // Generic.Deleted.Specific
-  --minima-dark-highlight-gdx-background-color: #faa ; // Generic.Deleted.Specific
-  --minima-dark-highlight-ge-font-style: italic ; // Generic.Emph
-  --minima-dark-highlight-gr-color: #f07178 ; // Generic.Error
-  --minima-dark-highlight-gh-color: #999 ; // Generic.Heading
-  --minima-dark-highlight-gi-color: #000;  // Generic.Inserted
-  --minima-dark-highlight-gi-background-color: #dfd ; // Generic.Inserted
-  --minima-dark-highlight-gix-color: #000;  // Generic.Inserted.Specific
-  --minima-dark-highlight-gix-background-color: #afa ; // Generic.Inserted.Specific
-  --minima-dark-highlight-go-color: #888 ; // Generic.Output
-  --minima-dark-highlight-gp-color: #555 ; // Generic.Prompt
-  --minima-dark-highlight-gs-font-weight: bold ; // Generic.Strong
-  --minima-dark-highlight-gu-color: #aaa ; // Generic.Subheading
-  --minima-dark-highlight-gt-color: #f07178 ; // Generic.Traceback
-  --minima-dark-highlight-kc-font-weight: bold ; // Keyword.Constant
-  --minima-dark-highlight-kd-font-weight: bold ; // Keyword.Declaration
-  --minima-dark-highlight-kp-font-weight: bold ; // Keyword.Pseudo
-  --minima-dark-highlight-kr-font-weight: bold ; // Keyword.Reserved
-  --minima-dark-highlight-kt-color: #FFCB6B;  // Keyword.Type
-  --minima-dark-highlight-kt-font-weight: bold ; // Keyword.Type
-  --minima-dark-highlight-m-color: #F78C6C ; // Literal.Number
-  --minima-dark-highlight-s-color: #C3E88D ; // Literal.String
-  --minima-dark-highlight-na-color: #008080 ; // Name.Attribute
-  --minima-dark-highlight-nb-color: #EEFFFF ; // Name.Builtin
-  --minima-dark-highlight-nc-color: #FFCB6B;  // Name.Class
-  --minima-dark-highlight-nc-font-weight: bold ; // Name.Class
-  --minima-dark-highlight-no-color: #008080 ; // Name.Constant
-  --minima-dark-highlight-ni-color: #800080 ; // Name.Entity
-  --minima-dark-highlight-ne-color: #900;  // Name.Exception
-  --minima-dark-highlight-ne-font-weight: bold ; // Name.Exception
-  --minima-dark-highlight-nf-color: #82AAFF; // Name.Function
-  --minima-dark-highlight-nf-font-weight: bold ; // Name.Function
-  --minima-dark-highlight-nn-color: #555 ; // Name.Namespace
-  --minima-dark-highlight-nt-color: #FFCB6B ; // Name.Tag
-  --minima-dark-highlight-nv-color: #EEFFFF ; // Name.Variable
-  --minima-dark-highlight-ow-font-weight: bold ; // Operator.Word
-  --minima-dark-highlight-w-color: #EEFFFF ; // Text.Whitespace
-  --minima-dark-highlight-mf-color: #F78C6C ; // Literal.Number.Float
-  --minima-dark-highlight-mh-color: #F78C6C ; // Literal.Number.Hex
-  --minima-dark-highlight-mi-color: #F78C6C ; // Literal.Number.Integer
-  --minima-dark-highlight-mo-color: #F78C6C ; // Literal.Number.Oct
-  --minima-dark-highlight-sb-color: #C3E88D ; // Literal.String.Backtick
-  --minima-dark-highlight-sc-color: #C3E88D ; // Literal.String.Char
-  --minima-dark-highlight-sd-color: #C3E88D ; // Literal.String.Doc
-  --minima-dark-highlight-s2-color: #C3E88D ; // Literal.String.Double
-  --minima-dark-highlight-se-color: #EEFFFF ; // Literal.String.Escape
-  --minima-dark-highlight-sh-color: #C3E88D ; // Literal.String.Heredoc
-  --minima-dark-highlight-si-color: #C3E88D ; // Literal.String.Interpol
-  --minima-dark-highlight-sx-color: #C3E88D ; // Literal.String.Other
-  --minima-dark-highlight-sr-color: #C3E88D ; // Literal.String.Regex
-  --minima-dark-highlight-s1-color: #C3E88D ; // Literal.String.Single
-  --minima-dark-highlight-ss-color: #C3E88D ; // Literal.String.Symbol
-  --minima-dark-highlight-bp-color: #999 ; // Name.Builtin.Pseudo
-  --minima-dark-highlight-vc-color: #FFCB6B ; // Name.Variable.Class
-  --minima-dark-highlight-vg-color: #EEFFFF ; // Name.Variable.Global
-  --minima-dark-highlight-vi-color: #EEFFFF ; // Name.Variable.Instance
-  --minima-dark-highlight-il-color: #F78C6C ; // Literal.Number.Integer.Long
+  --minima-dark-highlight-c-color: #545454; /*Comment*/
+  --minima-dark-highlight-c-font-style: italic ; /*Comment*/
+  --minima-dark-highlight-err-color: #f07178; /*Error*/
+  --minima-dark-highlight-err-background-color: #e3d2d2 ; /*Error*/
+  --minima-dark-highlight-k-color: #89DDFF; /*Keyword*/
+  --minima-dark-highlight-k-font-weight: bold ; /*Keyword*/
+  --minima-dark-highlight-o-font-weight: bold ; /*Operator*/
+  --minima-dark-highlight-cm-color: #545454; /*Comment.Multiline*/
+  --minima-dark-highlight-cm-font-style: italic ; /*Comment.Multiline*/
+  --minima-dark-highlight-cp-color: #545454;  /*Comment.Preproc*/
+  --minima-dark-highlight-cp-font-weight: bold ; /*Comment.Preproc*/
+  --minima-dark-highlight-c1-color: #545454; /*Comment.Single*/
+  --minima-dark-highlight-c1-font-style: italic ; /*Comment.Single*/
+  --minima-dark-highlight-cs-color: #545454; /*Comment.Special*/
+  --minima-dark-highlight-cs-font-weight: bold; /*Comment.Special*/
+  --minima-dark-highlight-cs-font-style: italic ; /*Comment.Special*/
+  --minima-dark-highlight-gd-color: #000; /*Generic.Deleted*/
+  --minima-dark-highlight-gd-background-color: #fdd;  /*Generic.Deleted*/
+  --minima-dark-highlight-gdx-color: #000;  /*Generic.Deleted.Specific*/
+  --minima-dark-highlight-gdx-background-color: #faa ; /*Generic.Deleted.Specific*/
+  --minima-dark-highlight-ge-font-style: italic ; /*Generic.Emph*/
+  --minima-dark-highlight-gr-color: #f07178 ; /*Generic.Error*/
+  --minima-dark-highlight-gh-color: #999 ; /*Generic.Heading*/
+  --minima-dark-highlight-gi-color: #000;  /*Generic.Inserted*/
+  --minima-dark-highlight-gi-background-color: #dfd ; /*Generic.Inserted*/
+  --minima-dark-highlight-gix-color: #000;  /*Generic.Inserted.Specific*/
+  --minima-dark-highlight-gix-background-color: #afa ; /*Generic.Inserted.Specific*/
+  --minima-dark-highlight-go-color: #888 ; /*Generic.Output*/
+  --minima-dark-highlight-gp-color: #555 ; /*Generic.Prompt*/
+  --minima-dark-highlight-gs-font-weight: bold ; /*Generic.Strong*/
+  --minima-dark-highlight-gu-color: #aaa ; /*Generic.Subheading*/
+  --minima-dark-highlight-gt-color: #f07178 ; /*Generic.Traceback*/
+  --minima-dark-highlight-kc-font-weight: bold ; /*Keyword.Constant*/
+  --minima-dark-highlight-kd-font-weight: bold ; /*Keyword.Declaration*/
+  --minima-dark-highlight-kp-font-weight: bold ; /*Keyword.Pseudo*/
+  --minima-dark-highlight-kr-font-weight: bold ; /*Keyword.Reserved*/
+  --minima-dark-highlight-kt-color: #FFCB6B;  /*Keyword.Type*/
+  --minima-dark-highlight-kt-font-weight: bold ; /*Keyword.Type*/
+  --minima-dark-highlight-m-color: #F78C6C ; /*Literal.Number*/
+  --minima-dark-highlight-s-color: #C3E88D ; /*Literal.String*/
+  --minima-dark-highlight-na-color: #008080 ; /*Name.Attribute*/
+  --minima-dark-highlight-nb-color: #EEFFFF ; /*Name.Builtin*/
+  --minima-dark-highlight-nc-color: #FFCB6B;  /*Name.Class*/
+  --minima-dark-highlight-nc-font-weight: bold ; /*Name.Class*/
+  --minima-dark-highlight-no-color: #008080 ; /*Name.Constant*/
+  --minima-dark-highlight-ni-color: #800080 ; /*Name.Entity*/
+  --minima-dark-highlight-ne-color: #900;  /*Name.Exception*/
+  --minima-dark-highlight-ne-font-weight: bold ; /*Name.Exception*/
+  --minima-dark-highlight-nf-color: #82AAFF; /*Name.Function*/
+  --minima-dark-highlight-nf-font-weight: bold ; /*Name.Function*/
+  --minima-dark-highlight-nn-color: #555 ; /*Name.Namespace*/
+  --minima-dark-highlight-nt-color: #FFCB6B ; /*Name.Tag*/
+  --minima-dark-highlight-nv-color: #EEFFFF ; /*Name.Variable*/
+  --minima-dark-highlight-ow-font-weight: bold ; /*Operator.Word*/
+  --minima-dark-highlight-w-color: #EEFFFF ; /*Text.Whitespace*/
+  --minima-dark-highlight-mf-color: #F78C6C ; /*Literal.Number.Float*/
+  --minima-dark-highlight-mh-color: #F78C6C ; /*Literal.Number.Hex*/
+  --minima-dark-highlight-mi-color: #F78C6C ; /*Literal.Number.Integer*/
+  --minima-dark-highlight-mo-color: #F78C6C ; /*Literal.Number.Oct*/
+  --minima-dark-highlight-sb-color: #C3E88D ; /*Literal.String.Backtick*/
+  --minima-dark-highlight-sc-color: #C3E88D ; /*Literal.String.Char*/
+  --minima-dark-highlight-sd-color: #C3E88D ; /*Literal.String.Doc*/
+  --minima-dark-highlight-s2-color: #C3E88D ; /*Literal.String.Double*/
+  --minima-dark-highlight-se-color: #EEFFFF ; /*Literal.String.Escape*/
+  --minima-dark-highlight-sh-color: #C3E88D ; /*Literal.String.Heredoc*/
+  --minima-dark-highlight-si-color: #C3E88D ; /*Literal.String.Interpol*/
+  --minima-dark-highlight-sx-color: #C3E88D ; /*Literal.String.Other*/
+  --minima-dark-highlight-sr-color: #C3E88D ; /*Literal.String.Regex*/
+  --minima-dark-highlight-s1-color: #C3E88D ; /*Literal.String.Single*/
+  --minima-dark-highlight-ss-color: #C3E88D ; /*Literal.String.Symbol*/
+  --minima-dark-highlight-bp-color: #999 ; /*Name.Builtin.Pseudo*/
+  --minima-dark-highlight-vc-color: #FFCB6B ; /*Name.Variable.Class*/
+  --minima-dark-highlight-vg-color: #EEFFFF ; /*Name.Variable.Global*/
+  --minima-dark-highlight-vi-color: #EEFFFF ; /*Name.Variable.Instance*/
+  --minima-dark-highlight-il-color: #F78C6C ; /*Literal.Number.Integer.Long*/
 }
 
 .highlight {
-  .c     { color: var(--minima-highlight-c-color); background-color: var(--minima-highlight-c-background-color); font-style: var(--minima-highlight-c-font-style); font-weight: var(--minima-highlight-c-font-weight) } // Comment
-  .err   { color: var(--minima-highlight-err-color); background-color: var(--minima-highlight-err-background-color); font-style: var(--minima-highlight-err-font-style); font-weight: var(--minima-highlight-err-font-weight) } // Error
-  .k     { color: var(--minima-highlight-k-color); background-color: var(--minima-highlight-k-background-color); font-style: var(--minima-highlight-k-font-style); font-weight: var(--minima-highlight-k-font-weight) } // Keyword
-  .o     { color: var(--minima-highlight-o-color); background-color: var(--minima-highlight-o-background-color); font-style: var(--minima-highlight-o-font-style); font-weight: var(--minima-highlight-o-font-weight) } // Operator
-  .cm    { color: var(--minima-highlight-cm-color); background-color: var(--minima-highlight-cm-background-color); font-style: var(--minima-highlight-cm-font-style); font-weight: var(--minima-highlight-cm-font-weight) } // Comment.Multiline
-  .cp    { color: var(--minima-highlight-cp-color); background-color: var(--minima-highlight-cp-background-color); font-style: var(--minima-highlight-cp-font-style); font-weight: var(--minima-highlight-cp-font-weight) } // Comment.Preproc
-  .c1    { color: var(--minima-highlight-c1-color); background-color: var(--minima-highlight-c1-background-color); font-style: var(--minima-highlight-c1-font-style); font-weight: var(--minima-highlight-c1-font-weight) } // Comment.Single
-  .cs    { color: var(--minima-highlight-cs-color); background-color: var(--minima-highlight-cs-background-color); font-style: var(--minima-highlight-cs-font-style); font-weight: var(--minima-highlight-cs-font-weight) } // Comment.Special
-  .gd    { color: var(--minima-highlight-gd-color); background-color: var(--minima-highlight-gd-background-color); font-style: var(--minima-highlight-gd-font-style); font-weight: var(--minima-highlight-gd-font-weight) } // Generic.Deleted
-  .gd .x { color: var(--minima-highlight-gdx-color); background-color: var(--minima-highlight-gdx-background-color); font-style: var(--minima-highlight-gdx-font-style); font-weight: var(--minima-highlight-gdx-font-weight) } // Generic.Deleted.Specific
-  .ge    { color: var(--minima-highlight-ge-color); background-color: var(--minima-highlight-ge-background-color); font-style: var(--minima-highlight-ge-font-style); font-weight: var(--minima-highlight-ge-font-weight) } // Generic.Emph
-  .gr    { color: var(--minima-highlight-gr-color); background-color: var(--minima-highlight-gr-background-color); font-style: var(--minima-highlight-gr-font-style); font-weight: var(--minima-highlight-gr-font-weight) } // Generic.Error
-  .gh    { color: var(--minima-highlight-gh-color); background-color: var(--minima-highlight-gh-background-color); font-style: var(--minima-highlight-gh-font-style); font-weight: var(--minima-highlight-gh-font-weight) } // Generic.Heading
-  .gi    { color: var(--minima-highlight-gi-color); background-color: var(--minima-highlight-gi-background-color); font-style: var(--minima-highlight-gi-font-style); font-weight: var(--minima-highlight-gi-font-weight) } // Generic.Inserted
-  .gi .x { color: var(--minima-highlight-gix-color); background-color: var(--minima-highlight-gix-background-color); font-style: var(--minima-highlight-gix-font-style); font-weight: var(--minima-highlight-gix-font-weight) } // Generic.Inserted.Specific
-  .go    { color: var(--minima-highlight-go-color); background-color: var(--minima-highlight-go-background-color); font-style: var(--minima-highlight-go-font-style); font-weight: var(--minima-highlight-go-font-weight) } // Generic.Output
-  .gp    { color: var(--minima-highlight-gp-color); background-color: var(--minima-highlight-gp-background-color); font-style: var(--minima-highlight-gp-font-style); font-weight: var(--minima-highlight-gp-font-weight) } // Generic.Prompt
-  .gs    { color: var(--minima-highlight-gs-color); background-color: var(--minima-highlight-gs-background-color); font-style: var(--minima-highlight-gs-font-style); font-weight: var(--minima-highlight-gs-font-weight) } // Generic.Strong
-  .gu    { color: var(--minima-highlight-gu-color); background-color: var(--minima-highlight-gu-background-color); font-style: var(--minima-highlight-gu-font-style); font-weight: var(--minima-highlight-gu-font-weight) } // Generic.Subheading
-  .gt    { color: var(--minima-highlight-gt-color); background-color: var(--minima-highlight-gt-background-color); font-style: var(--minima-highlight-gt-font-style); font-weight: var(--minima-highlight-gt-font-weight) } // Generic.Traceback
-  .kc    { color: var(--minima-highlight-kc-color); background-color: var(--minima-highlight-kc-background-color); font-style: var(--minima-highlight-kc-font-style); font-weight: var(--minima-highlight-kc-font-weight) } // Keyword.Constant
-  .kd    { color: var(--minima-highlight-kd-color); background-color: var(--minima-highlight-kd-background-color); font-style: var(--minima-highlight-kd-font-style); font-weight: var(--minima-highlight-kd-font-weight) } // Keyword.Declaration
-  .kp    { color: var(--minima-highlight-kp-color); background-color: var(--minima-highlight-kp-background-color); font-style: var(--minima-highlight-kp-font-style); font-weight: var(--minima-highlight-kp-font-weight) } // Keyword.Pseudo
-  .kr    { color: var(--minima-highlight-kr-color); background-color: var(--minima-highlight-kr-background-color); font-style: var(--minima-highlight-kr-font-style); font-weight: var(--minima-highlight-kr-font-weight) } // Keyword.Reserved
-  .kt    { color: var(--minima-highlight-kt-color); background-color: var(--minima-highlight-kt-background-color); font-style: var(--minima-highlight-kt-font-style); font-weight: var(--minima-highlight-kt-font-weight) } // Keyword.Type
-  .m     { color: var(--minima-highlight-m-color); background-color: var(--minima-highlight-m-background-color); font-style: var(--minima-highlight-m-font-style); font-weight: var(--minima-highlight-m-font-weight) } // Literal.Number
-  .s     { color: var(--minima-highlight-s-color); background-color: var(--minima-highlight-s-background-color); font-style: var(--minima-highlight-s-font-style); font-weight: var(--minima-highlight-s-font-weight) } // Literal.String
-  .na    { color: var(--minima-highlight-na-color); background-color: var(--minima-highlight-na-background-color); font-style: var(--minima-highlight-na-font-style); font-weight: var(--minima-highlight-na-font-weight) } // Name.Attribute
-  .nb    { color: var(--minima-highlight-nb-color); background-color: var(--minima-highlight-nb-background-color); font-style: var(--minima-highlight-nb-font-style); font-weight: var(--minima-highlight-nb-font-weight) } // Name.Builtin
-  .nc    { color: var(--minima-highlight-nc-color); background-color: var(--minima-highlight-nc-background-color); font-style: var(--minima-highlight-nc-font-style); font-weight: var(--minima-highlight-nc-font-weight) } // Name.Class
-  .no    { color: var(--minima-highlight-no-color); background-color: var(--minima-highlight-no-background-color); font-style: var(--minima-highlight-no-font-style); font-weight: var(--minima-highlight-no-font-weight) } // Name.Constant
-  .ni    { color: var(--minima-highlight-ni-color); background-color: var(--minima-highlight-ni-background-color); font-style: var(--minima-highlight-ni-font-style); font-weight: var(--minima-highlight-ni-font-weight) } // Name.Entity
-  .ne    { color: var(--minima-highlight-ne-color); background-color: var(--minima-highlight-ne-background-color); font-style: var(--minima-highlight-ne-font-style); font-weight: var(--minima-highlight-ne-font-weight) } // Name.Exception
-  .nf    { color: var(--minima-highlight-nf-color); background-color: var(--minima-highlight-nf-background-color); font-style: var(--minima-highlight-nf-font-style); font-weight: var(--minima-highlight-nf-font-weight) } // Name.Function
-  .nn    { color: var(--minima-highlight-nn-color); background-color: var(--minima-highlight-nn-background-color); font-style: var(--minima-highlight-nn-font-style); font-weight: var(--minima-highlight-nn-font-weight) } // Name.Namespace
-  .nt    { color: var(--minima-highlight-nt-color); background-color: var(--minima-highlight-nt-background-color); font-style: var(--minima-highlight-nt-font-style); font-weight: var(--minima-highlight-nt-font-weight) } // Name.Tag
-  .nv    { color: var(--minima-highlight-nv-color); background-color: var(--minima-highlight-nv-background-color); font-style: var(--minima-highlight-nv-font-style); font-weight: var(--minima-highlight-nv-font-weight) } // Name.Variable
-  .ow    { color: var(--minima-highlight-ow-color); background-color: var(--minima-highlight-ow-background-color); font-style: var(--minima-highlight-ow-font-style); font-weight: var(--minima-highlight-ow-font-weight) } // Operator.Word
-  .w     { color: var(--minima-highlight-w-color); background-color: var(--minima-highlight-w-background-color); font-style: var(--minima-highlight-w-font-style); font-weight: var(--minima-highlight-w-font-weight) } // Text.Whitespace
-  .mf    { color: var(--minima-highlight-mf-color); background-color: var(--minima-highlight-mf-background-color); font-style: var(--minima-highlight-mf-font-style); font-weight: var(--minima-highlight-mf-font-weight) } // Literal.Number.Float
-  .mh    { color: var(--minima-highlight-nh-color); background-color: var(--minima-highlight-nh-background-color); font-style: var(--minima-highlight-nh-font-style); font-weight: var(--minima-highlight-nh-font-weight) } // Literal.Number.Hex
-  .mi    { color: var(--minima-highlight-mi-color); background-color: var(--minima-highlight-mi-background-color); font-style: var(--minima-highlight-mi-font-style); font-weight: var(--minima-highlight-mi-font-weight) } // Literal.Number.Integer
-  .mo    { color: var(--minima-highlight-mo-color); background-color: var(--minima-highlight-mo-background-color); font-style: var(--minima-highlight-mo-font-style); font-weight: var(--minima-highlight-mo-font-weight) } // Literal.Number.Oct
-  .sb    { color: var(--minima-highlight-sb-color); background-color: var(--minima-highlight-sb-background-color); font-style: var(--minima-highlight-sb-font-style); font-weight: var(--minima-highlight-sb-font-weight) } // Literal.String.Backtick
-  .sc    { color: var(--minima-highlight-sc-color); background-color: var(--minima-highlight-sc-background-color); font-style: var(--minima-highlight-sc-font-style); font-weight: var(--minima-highlight-sc-font-weight) } // Literal.String.Char
-  .sd    { color: var(--minima-highlight-sd-color); background-color: var(--minima-highlight-sd-background-color); font-style: var(--minima-highlight-sd-font-style); font-weight: var(--minima-highlight-sd-font-weight) } // Literal.String.Doc
-  .s2    { color: var(--minima-highlight-s2-color); background-color: var(--minima-highlight-s2-background-color); font-style: var(--minima-highlight-s2-font-style); font-weight: var(--minima-highlight-s2-font-weight) } // Literal.String.Double
-  .se    { color: var(--minima-highlight-se-color); background-color: var(--minima-highlight-se-background-color); font-style: var(--minima-highlight-se-font-style); font-weight: var(--minima-highlight-se-font-weight) } // Literal.String.Escape
-  .sh    { color: var(--minima-highlight-sh-color); background-color: var(--minima-highlight-sh-background-color); font-style: var(--minima-highlight-sh-font-style); font-weight: var(--minima-highlight-sh-font-weight) } // Literal.String.Heredoc
-  .si    { color: var(--minima-highlight-si-color); background-color: var(--minima-highlight-si-background-color); font-style: var(--minima-highlight-si-font-style); font-weight: var(--minima-highlight-si-font-weight) }// Literal.String.Interpol
-  .sx    { color: var(--minima-highlight-sx-color); background-color: var(--minima-highlight-sx-background-color); font-style: var(--minima-highlight-sx-font-style); font-weight: var(--minima-highlight-sx-font-weight) } // Literal.String.Other
-  .sr    { color: var(--minima-highlight-sr-color); background-color: var(--minima-highlight-sr-background-color); font-style: var(--minima-highlight-sr-font-style); font-weight: var(--minima-highlight-sr-font-weight) } // Literal.String.Regex
-  .s1    { color: var(--minima-highlight-s1-color); background-color: var(--minima-highlight-s1-background-color); font-style: var(--minima-highlight-s1-font-style); font-weight: var(--minima-highlight-s1-font-weight) } // Literal.String.Single
-  .ss    { color: var(--minima-highlight-ss-color); background-color: var(--minima-highlight-ss-background-color); font-style: var(--minima-highlight-ss-font-style); font-weight: var(--minima-highlight-ss-font-weight) } // Literal.String.Symbol
-  .bp    { color: var(--minima-highlight-bp-color); background-color: var(--minima-highlight-bp-background-color); font-style: var(--minima-highlight-bp-font-style); font-weight: var(--minima-highlight-bp-font-weight) } // Name.Builtin.Pseudo
-  .vc    { color: var(--minima-highlight-vc-color); background-color: var(--minima-highlight-vc-background-color); font-style: var(--minima-highlight-vc-font-style); font-weight: var(--minima-highlight-vc-font-weight) } // Name.Variable.Class
-  .vg    { color: var(--minima-highlight-vg-color); background-color: var(--minima-highlight-vg-background-color); font-style: var(--minima-highlight-vg-font-style); font-weight: var(--minima-highlight-vg-font-weight) } // Name.Variable.Global
-  .vi    { color: var(--minima-highlight-vi-color); background-color: var(--minima-highlight-vi-background-color); font-style: var(--minima-highlight-vi-font-style); font-weight: var(--minima-highlight-vi-font-weight) } // Name.Variable.Instance
-  .il    { color: var(--minima-highlight-il-color); background-color: var(--minima-highlight-il-background-color); font-style: var(--minima-highlight-il-font-style); font-weight: var(--minima-highlight-il-font-weight) } // Literal.Number.Integer.Long
+  .c     { color: var(--minima-highlight-c-color); background-color: var(--minima-highlight-c-background-color); font-style: var(--minima-highlight-c-font-style); font-weight: var(--minima-highlight-c-font-weight) } /* Comment*/
+  .err   { color: var(--minima-highlight-err-color); background-color: var(--minima-highlight-err-background-color); font-style: var(--minima-highlight-err-font-style); font-weight: var(--minima-highlight-err-font-weight) } /* Error*/
+  .k     { color: var(--minima-highlight-k-color); background-color: var(--minima-highlight-k-background-color); font-style: var(--minima-highlight-k-font-style); font-weight: var(--minima-highlight-k-font-weight) } /* Keyword*/
+  .o     { color: var(--minima-highlight-o-color); background-color: var(--minima-highlight-o-background-color); font-style: var(--minima-highlight-o-font-style); font-weight: var(--minima-highlight-o-font-weight) } /* Operator*/
+  .cm    { color: var(--minima-highlight-cm-color); background-color: var(--minima-highlight-cm-background-color); font-style: var(--minima-highlight-cm-font-style); font-weight: var(--minima-highlight-cm-font-weight) } /* Comment.Multiline*/
+  .cp    { color: var(--minima-highlight-cp-color); background-color: var(--minima-highlight-cp-background-color); font-style: var(--minima-highlight-cp-font-style); font-weight: var(--minima-highlight-cp-font-weight) } /* Comment.Preproc*/
+  .c1    { color: var(--minima-highlight-c1-color); background-color: var(--minima-highlight-c1-background-color); font-style: var(--minima-highlight-c1-font-style); font-weight: var(--minima-highlight-c1-font-weight) } /* Comment.Single*/
+  .cs    { color: var(--minima-highlight-cs-color); background-color: var(--minima-highlight-cs-background-color); font-style: var(--minima-highlight-cs-font-style); font-weight: var(--minima-highlight-cs-font-weight) } /* Comment.Special*/
+  .gd    { color: var(--minima-highlight-gd-color); background-color: var(--minima-highlight-gd-background-color); font-style: var(--minima-highlight-gd-font-style); font-weight: var(--minima-highlight-gd-font-weight) } /* Generic.Deleted*/
+  .gd .x { color: var(--minima-highlight-gdx-color); background-color: var(--minima-highlight-gdx-background-color); font-style: var(--minima-highlight-gdx-font-style); font-weight: var(--minima-highlight-gdx-font-weight) } /* Generic.Deleted.Specific*/
+  .ge    { color: var(--minima-highlight-ge-color); background-color: var(--minima-highlight-ge-background-color); font-style: var(--minima-highlight-ge-font-style); font-weight: var(--minima-highlight-ge-font-weight) } /* Generic.Emph*/
+  .gr    { color: var(--minima-highlight-gr-color); background-color: var(--minima-highlight-gr-background-color); font-style: var(--minima-highlight-gr-font-style); font-weight: var(--minima-highlight-gr-font-weight) } /* Generic.Error*/
+  .gh    { color: var(--minima-highlight-gh-color); background-color: var(--minima-highlight-gh-background-color); font-style: var(--minima-highlight-gh-font-style); font-weight: var(--minima-highlight-gh-font-weight) } /* Generic.Heading*/
+  .gi    { color: var(--minima-highlight-gi-color); background-color: var(--minima-highlight-gi-background-color); font-style: var(--minima-highlight-gi-font-style); font-weight: var(--minima-highlight-gi-font-weight) } /* Generic.Inserted*/
+  .gi .x { color: var(--minima-highlight-gix-color); background-color: var(--minima-highlight-gix-background-color); font-style: var(--minima-highlight-gix-font-style); font-weight: var(--minima-highlight-gix-font-weight) } /* Generic.Inserted.Specific*/
+  .go    { color: var(--minima-highlight-go-color); background-color: var(--minima-highlight-go-background-color); font-style: var(--minima-highlight-go-font-style); font-weight: var(--minima-highlight-go-font-weight) } /* Generic.Output*/
+  .gp    { color: var(--minima-highlight-gp-color); background-color: var(--minima-highlight-gp-background-color); font-style: var(--minima-highlight-gp-font-style); font-weight: var(--minima-highlight-gp-font-weight) } /* Generic.Prompt*/
+  .gs    { color: var(--minima-highlight-gs-color); background-color: var(--minima-highlight-gs-background-color); font-style: var(--minima-highlight-gs-font-style); font-weight: var(--minima-highlight-gs-font-weight) } /* Generic.Strong*/
+  .gu    { color: var(--minima-highlight-gu-color); background-color: var(--minima-highlight-gu-background-color); font-style: var(--minima-highlight-gu-font-style); font-weight: var(--minima-highlight-gu-font-weight) } /* Generic.Subheading*/
+  .gt    { color: var(--minima-highlight-gt-color); background-color: var(--minima-highlight-gt-background-color); font-style: var(--minima-highlight-gt-font-style); font-weight: var(--minima-highlight-gt-font-weight) } /* Generic.Traceback*/
+  .kc    { color: var(--minima-highlight-kc-color); background-color: var(--minima-highlight-kc-background-color); font-style: var(--minima-highlight-kc-font-style); font-weight: var(--minima-highlight-kc-font-weight) } /* Keyword.Constant*/
+  .kd    { color: var(--minima-highlight-kd-color); background-color: var(--minima-highlight-kd-background-color); font-style: var(--minima-highlight-kd-font-style); font-weight: var(--minima-highlight-kd-font-weight) } /* Keyword.Declaration*/
+  .kp    { color: var(--minima-highlight-kp-color); background-color: var(--minima-highlight-kp-background-color); font-style: var(--minima-highlight-kp-font-style); font-weight: var(--minima-highlight-kp-font-weight) } /* Keyword.Pseudo*/
+  .kr    { color: var(--minima-highlight-kr-color); background-color: var(--minima-highlight-kr-background-color); font-style: var(--minima-highlight-kr-font-style); font-weight: var(--minima-highlight-kr-font-weight) } /* Keyword.Reserved*/
+  .kt    { color: var(--minima-highlight-kt-color); background-color: var(--minima-highlight-kt-background-color); font-style: var(--minima-highlight-kt-font-style); font-weight: var(--minima-highlight-kt-font-weight) } /* Keyword.Type*/
+  .m     { color: var(--minima-highlight-m-color); background-color: var(--minima-highlight-m-background-color); font-style: var(--minima-highlight-m-font-style); font-weight: var(--minima-highlight-m-font-weight) } /* Literal.Number*/
+  .s     { color: var(--minima-highlight-s-color); background-color: var(--minima-highlight-s-background-color); font-style: var(--minima-highlight-s-font-style); font-weight: var(--minima-highlight-s-font-weight) } /* Literal.String*/
+  .na    { color: var(--minima-highlight-na-color); background-color: var(--minima-highlight-na-background-color); font-style: var(--minima-highlight-na-font-style); font-weight: var(--minima-highlight-na-font-weight) } /* Name.Attribute*/
+  .nb    { color: var(--minima-highlight-nb-color); background-color: var(--minima-highlight-nb-background-color); font-style: var(--minima-highlight-nb-font-style); font-weight: var(--minima-highlight-nb-font-weight) } /* Name.Builtin*/
+  .nc    { color: var(--minima-highlight-nc-color); background-color: var(--minima-highlight-nc-background-color); font-style: var(--minima-highlight-nc-font-style); font-weight: var(--minima-highlight-nc-font-weight) } /* Name.Class*/
+  .no    { color: var(--minima-highlight-no-color); background-color: var(--minima-highlight-no-background-color); font-style: var(--minima-highlight-no-font-style); font-weight: var(--minima-highlight-no-font-weight) } /* Name.Constant*/
+  .ni    { color: var(--minima-highlight-ni-color); background-color: var(--minima-highlight-ni-background-color); font-style: var(--minima-highlight-ni-font-style); font-weight: var(--minima-highlight-ni-font-weight) } /* Name.Entity*/
+  .ne    { color: var(--minima-highlight-ne-color); background-color: var(--minima-highlight-ne-background-color); font-style: var(--minima-highlight-ne-font-style); font-weight: var(--minima-highlight-ne-font-weight) } /* Name.Exception*/
+  .nf    { color: var(--minima-highlight-nf-color); background-color: var(--minima-highlight-nf-background-color); font-style: var(--minima-highlight-nf-font-style); font-weight: var(--minima-highlight-nf-font-weight) } /* Name.Function*/
+  .nn    { color: var(--minima-highlight-nn-color); background-color: var(--minima-highlight-nn-background-color); font-style: var(--minima-highlight-nn-font-style); font-weight: var(--minima-highlight-nn-font-weight) } /* Name.Namespace*/
+  .nt    { color: var(--minima-highlight-nt-color); background-color: var(--minima-highlight-nt-background-color); font-style: var(--minima-highlight-nt-font-style); font-weight: var(--minima-highlight-nt-font-weight) } /* Name.Tag*/
+  .nv    { color: var(--minima-highlight-nv-color); background-color: var(--minima-highlight-nv-background-color); font-style: var(--minima-highlight-nv-font-style); font-weight: var(--minima-highlight-nv-font-weight) } /* Name.Variable*/
+  .ow    { color: var(--minima-highlight-ow-color); background-color: var(--minima-highlight-ow-background-color); font-style: var(--minima-highlight-ow-font-style); font-weight: var(--minima-highlight-ow-font-weight) } /* Operator.Word*/
+  .w     { color: var(--minima-highlight-w-color); background-color: var(--minima-highlight-w-background-color); font-style: var(--minima-highlight-w-font-style); font-weight: var(--minima-highlight-w-font-weight) } /* Text.Whitespace*/
+  .mf    { color: var(--minima-highlight-mf-color); background-color: var(--minima-highlight-mf-background-color); font-style: var(--minima-highlight-mf-font-style); font-weight: var(--minima-highlight-mf-font-weight) } /* Literal.Number.Float*/
+  .mh    { color: var(--minima-highlight-nh-color); background-color: var(--minima-highlight-nh-background-color); font-style: var(--minima-highlight-nh-font-style); font-weight: var(--minima-highlight-nh-font-weight) } /* Literal.Number.Hex*/
+  .mi    { color: var(--minima-highlight-mi-color); background-color: var(--minima-highlight-mi-background-color); font-style: var(--minima-highlight-mi-font-style); font-weight: var(--minima-highlight-mi-font-weight) } /* Literal.Number.Integer*/
+  .mo    { color: var(--minima-highlight-mo-color); background-color: var(--minima-highlight-mo-background-color); font-style: var(--minima-highlight-mo-font-style); font-weight: var(--minima-highlight-mo-font-weight) } /* Literal.Number.Oct*/
+  .sb    { color: var(--minima-highlight-sb-color); background-color: var(--minima-highlight-sb-background-color); font-style: var(--minima-highlight-sb-font-style); font-weight: var(--minima-highlight-sb-font-weight) } /* Literal.String.Backtick*/
+  .sc    { color: var(--minima-highlight-sc-color); background-color: var(--minima-highlight-sc-background-color); font-style: var(--minima-highlight-sc-font-style); font-weight: var(--minima-highlight-sc-font-weight) } /* Literal.String.Char*/
+  .sd    { color: var(--minima-highlight-sd-color); background-color: var(--minima-highlight-sd-background-color); font-style: var(--minima-highlight-sd-font-style); font-weight: var(--minima-highlight-sd-font-weight) } /* Literal.String.Doc*/
+  .s2    { color: var(--minima-highlight-s2-color); background-color: var(--minima-highlight-s2-background-color); font-style: var(--minima-highlight-s2-font-style); font-weight: var(--minima-highlight-s2-font-weight) } /* Literal.String.Double*/
+  .se    { color: var(--minima-highlight-se-color); background-color: var(--minima-highlight-se-background-color); font-style: var(--minima-highlight-se-font-style); font-weight: var(--minima-highlight-se-font-weight) } /* Literal.String.Escape*/
+  .sh    { color: var(--minima-highlight-sh-color); background-color: var(--minima-highlight-sh-background-color); font-style: var(--minima-highlight-sh-font-style); font-weight: var(--minima-highlight-sh-font-weight) } /* Literal.String.Heredoc*/
+  .si    { color: var(--minima-highlight-si-color); background-color: var(--minima-highlight-si-background-color); font-style: var(--minima-highlight-si-font-style); font-weight: var(--minima-highlight-si-font-weight) }/* Literal.String.Interpol*/
+  .sx    { color: var(--minima-highlight-sx-color); background-color: var(--minima-highlight-sx-background-color); font-style: var(--minima-highlight-sx-font-style); font-weight: var(--minima-highlight-sx-font-weight) } /* Literal.String.Other*/
+  .sr    { color: var(--minima-highlight-sr-color); background-color: var(--minima-highlight-sr-background-color); font-style: var(--minima-highlight-sr-font-style); font-weight: var(--minima-highlight-sr-font-weight) } /* Literal.String.Regex*/
+  .s1    { color: var(--minima-highlight-s1-color); background-color: var(--minima-highlight-s1-background-color); font-style: var(--minima-highlight-s1-font-style); font-weight: var(--minima-highlight-s1-font-weight) } /* Literal.String.Single*/
+  .ss    { color: var(--minima-highlight-ss-color); background-color: var(--minima-highlight-ss-background-color); font-style: var(--minima-highlight-ss-font-style); font-weight: var(--minima-highlight-ss-font-weight) } /* Literal.String.Symbol*/
+  .bp    { color: var(--minima-highlight-bp-color); background-color: var(--minima-highlight-bp-background-color); font-style: var(--minima-highlight-bp-font-style); font-weight: var(--minima-highlight-bp-font-weight) } /* Name.Builtin.Pseudo*/
+  .vc    { color: var(--minima-highlight-vc-color); background-color: var(--minima-highlight-vc-background-color); font-style: var(--minima-highlight-vc-font-style); font-weight: var(--minima-highlight-vc-font-weight) } /* Name.Variable.Class*/
+  .vg    { color: var(--minima-highlight-vg-color); background-color: var(--minima-highlight-vg-background-color); font-style: var(--minima-highlight-vg-font-style); font-weight: var(--minima-highlight-vg-font-weight) } /* Name.Variable.Global*/
+  .vi    { color: var(--minima-highlight-vi-color); background-color: var(--minima-highlight-vi-background-color); font-style: var(--minima-highlight-vi-font-style); font-weight: var(--minima-highlight-vi-font-weight) } /* Name.Variable.Instance*/
+  .il    { color: var(--minima-highlight-il-color); background-color: var(--minima-highlight-il-background-color); font-style: var(--minima-highlight-il-font-style); font-weight: var(--minima-highlight-il-font-weight) } /* Literal.Number.Integer.Long*/
 }
 
 
@@ -524,8 +525,10 @@ $forcedark: $falsemediaquery;
     --minima-content-width: 800px;
 }
 
+/*
 // Width of the content area
-@media screen and (min-width: 600px) { //on-medium = on-palm
+*/
+@media screen and (min-width: 600px) { /* on-medium = on-palm */
   .site-nav {
     position: static;
     float: right;
@@ -611,13 +614,13 @@ $forcedark: $falsemediaquery;
 }
 
 
-@media screen and (max-width: 600px) { //on-palm
+@media screen and (max-width: 600px) { /* on-palm */
 :root {
     --minima-site-title-padding-right: 45px;
 }
 }
 
-@media screen and (max-width: 800px) { //on-laptop
+@media screen and (max-width: 800px) { /* on-laptop */
 :root {
   --minima-table-display: block;
   --minima-table-overflow-x: auto;
@@ -626,6 +629,7 @@ $forcedark: $falsemediaquery;
 }
 }
 
+/*
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
 // List of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
 // Some colors come from Material Theme Darker:
@@ -643,6 +647,7 @@ $forcedark: $falsemediaquery;
 // approach, whereas media queries used elsewhere now use min-width.
 
 // Import pre-styling-overrides hook and style-partials.
+*/
 ;
 
 @import "custom-variables_base_layout_custom-styles.scss"

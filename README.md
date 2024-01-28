@@ -6,6 +6,7 @@ Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de9
 ```shell
 # install https://sass.github.io/libsass-python/
 python -m pip install libsass --user
+# python -c "import sass;print(sass.compile(string='\$colorscheme:\"light\";@import\'auto.scss\''))" > classic.css # see Makefile for all others
 
 # git clone https://github.com/jekyll/minima; pushd minima/_sass; git checkout 10124515953527c8990a2de99ae4ddb2a81ffee3; python -c "import sass;print(sass.compile(string='@import \'minima/skins/classic\',\'minima/initialize\''))" > ../../naiveclassic.css; popd;
 
@@ -15,9 +16,6 @@ cat ./minima/_sass/minima/skins/dark.scss ./minima/_sass/minima/skins/auto.scss 
 make naiveautoamalgamated.css naiveclassicamalgamated.css naivedarkamalgamated.css
 
 # similar to naiveclassic.scss, auto.scss is produced by manual amalgamation of ./assets/css/style.scss -> ./_sass/minima/skins/auto.scss -> ./_sass/minima/initialize.scss -> ./_sass/minima/_base.scss -> ./_sass/minima/_layout.scss
-make auto.css classic.css dark.css
-
-# compile classic.scss
-python -c "import sass;print(sass.compile(string='@import \'classic.scss\''))" > classic.css
-# python -c 'import sass; sass.compile(dirname = (".", "."))'
+make auto.css classic.css dark.css PYTHON=python
+make solarized.css solarized-light.css solarized-dark.css PYTHON=python
 ```

@@ -12,6 +12,7 @@ jobs:
           python -m pip install libsass --user
           make naiveautoamalgamated.css naiveclassicamalgamated.css naivedarkamalgamated.css naivesolarizedamalgamated.css naivesolarizedlightamalgamated.css naivesolarizeddarkamalgamated.css
           make auto.css classic.css dark.css
+          make solarized.css solarized-light.css solarized-dark.css 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:

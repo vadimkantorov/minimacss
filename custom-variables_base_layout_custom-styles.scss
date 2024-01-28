@@ -289,7 +289,9 @@ table {
   min-height: calc(var(--minima-spacing-unit) * 1.865);
   line-height: calc(var(--minima-base-line-height) * var(--minima-base-font-size) * 2.25);
 
+  /*
   // Positioning context for the mobile navigation icon
+  */
   position: relative;
 }
 
@@ -359,7 +361,9 @@ table {
     display: block;
     padding: 5px 10px;
 
+    /*
     // Gaps between nav items, but not on the last one
+    */
     &:not(:last-child) {
       margin-right: 0;
     }
