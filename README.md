@@ -13,6 +13,7 @@ python -m pip install libsass --user
 
 make amalgamated/auto.scss amalgamated/solarized.scss amalgamated/classic.scss amalgamated/dark.scss amalgamated/solarized-light.scss amalgamated/solarized-dark.scss
 make amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
+make asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css
 
 # i made auto.scss / solaried.scss and custom-variables_base_layout_custom-styles.scss by manual amalgamation and fixes of ./minima./assets/css/style.scss -> ./minima/_sass/minima/skins/auto.scss -> ./minima/_sass/minima/initialize.scss -> ./minima/_sass/minima/custom-variables.scss -> ./minima/_sass/minima/_base.scss -> ./minima/_sass/minima/_layout.scss -> ./minima/_sass/minima/custom-styles.scss
 
