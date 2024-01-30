@@ -1,8 +1,4 @@
-MINIMACOMMITHASH = 10124515953527c8990a2de99ae4ddb2a81ffee3
-PYTHON = python
-
-asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css: minima
-	cd $</_sass; $(PYTHON) -c "import sass;print(sass.compile(string='@import \'minima/skins/$(basename $(notdir $@)).scss\',\'minima/initialize\''))" > ../../$@
+SASS = sass
 
 amalgamated/auto.scss amalgamated/solarized.scss: minima
 	cat ./minima/_sass/minima/skins/$(notdir $@) ./minima/_sass/minima/initialize.scss ./minima/_sass/minima/custom-variables.scss ./minima/_sass/minima/_base.scss ./minima/_sass/minima/_layout.scss ./minima/_sass/minima/custom-styles.scss | grep -v -e '@import' -e '"minima' > $@
@@ -16,10 +12,13 @@ amalgamated/solarized-dark.scss: amalgamated/solarized.scss minima
 	cat ./minima/_sass/minima/skins/$(notdir $@) $< | grep -v -e '@import' -e '"minima' > $@
 
 amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css: 
-	$(PYTHON) -c "import sass;print(sass.compile(string='@import \'$(basename $@).scss\''))" > $@
+	$(SASS) $(basename $@).scss $@
 auto.css solarized.css:
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"auto\" ; @import \'$@\''))" > $@
+	echo '$$colorscheme:"auto";@import"$(basename $@).scss"' | $(SASS) --stdin $@
 classic.css dark.css: auto.scss
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"light\"; @import \'$<\''))" > $@
+	echo '$$colorscheme:"light";@import"$<"' | $(SASS) --stdin $@
 solarized-light.css solarized-dark.css: solarized.scss
-	$(PYTHON) -c "import sass;print(sass.compile(string='\$$colorscheme: \"dark\" ; @import \'$<\''))" > $@
+	echo '$$colorscheme:"dark";@import"$<"' | $(SASS) --stdin $@
+
+asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css: minima
+	echo '@import"minima/skins/$(basename $(notdir $@)).scss","minima/initialize"' | $(SASS) -I $</_sass --stdin $@

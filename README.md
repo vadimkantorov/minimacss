@@ -6,17 +6,18 @@ Based on commit https://github.com/jekyll/minima/commit/10124515953527c8990a2de9
 See the zip-ball in the release https://github.com/vadimkantorov/minimacss/releases/tag/cssrelease to download all the produced CSS files.
 
 ```shell
-# install https://sass.github.io/libsass-python/
-python -m pip install libsass --user
-# python -c "import sass;print(sass.compile(string='\$colorscheme:\"light\";@import\'auto.scss\''))" > classic.css # see Makefile for all others
-# cd ./minima/_sass; python -c "import sass;print(sass.compile(string='@import \'minima/skins/classic\',\'minima/initialize\''))" > ../../minima_classic.css
+# install x64 binaries of https://github.com/sass/dart-sass, libsass was deprecated
+wget https://github.com/sass/dart-sass/releases/download/1.70.0/dart-sass-1.70.0-linux-x64.tar.gz
+tar -xf dart-sass-1.70.0-linux-x64.tar.gz
+# echo '$$colorscheme:"light";@import"auto.scss"' | dart-sass/sass --stdin classic.css # see Makefile for all others
+# echo '@import"minima/skins/classic.scss","minima/initialize.scss"' | dart-sass/sass -I minima/_sass --stdin asis_classic.css
 
-make amalgamated/auto.scss amalgamated/solarized.scss amalgamated/classic.scss amalgamated/dark.scss amalgamated/solarized-light.scss amalgamated/solarized-dark.scss
-make amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
-make asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css
+make SASS=dart-sass/sass amalgamated/auto.scss amalgamated/solarized.scss amalgamated/classic.scss amalgamated/dark.scss amalgamated/solarized-light.scss amalgamated/solarized-dark.scss
+make SASS=dart-sass/sass amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
+make SASS=dart-sass/sass asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css
 
 # i made auto.scss / solaried.scss and custom-variables_base_layout_custom-styles.scss by manual amalgamation and fixes of ./minima./assets/css/style.scss -> ./minima/_sass/minima/skins/auto.scss -> ./minima/_sass/minima/initialize.scss -> ./minima/_sass/minima/custom-variables.scss -> ./minima/_sass/minima/_base.scss -> ./minima/_sass/minima/_layout.scss -> ./minima/_sass/minima/custom-styles.scss
 
-make auto.css classic.css dark.css PYTHON=python
-make solarized.css solarized-light.css solarized-dark.css PYTHON=python
+make SASS=dart-sass/sass auto.css classic.css dark.css
+make SASS=dart-sass/sass solarized.css solarized-light.css solarized-dark.css
 ```

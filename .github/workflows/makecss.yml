@@ -9,10 +9,11 @@ jobs:
           submodules: recursive
       - name: Compile CSS
         run: |
-          python -m pip install libsass --user
-          make asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css
-          make amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
-          make auto.css classic.css dark.css solarized.css solarized-light.css solarized-dark.css 
+          wget https://github.com/sass/dart-sass/releases/download/1.70.0/dart-sass-1.70.0-linux-x64.tar.gz
+          tar -xf dart-sass-1.70.0-linux-x64.tar.gz
+          make SASS=dart-sass/sass asis/auto.css asis/classic.css asis/dark.css asis/solarized.css asis/solarized-light.css asis/solarized-dark.css
+          make SASS=dart-sass/sass amalgamated/auto.css amalgamated/classic.css amalgamated/dark.css amalgamated/solarized.css amalgamated/solarized-light.css amalgamated/solarized-dark.css
+          make SASS=dart-sass/sass auto.css classic.css dark.css solarized.css solarized-light.css solarized-dark.css
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
