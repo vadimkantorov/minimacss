@@ -88,12 +88,12 @@ $forcedark: $falsemediaquery;
 */
 
 :root {
---sol-light-mix1:  #c8ccc2;/*mix($sol-base1, $sol-base3);*/
---sol-light-mix2:  #4683ab;/*mix($sol-blue, $sol-base00);*/
---sol-light-mix3:  #f6efdc;/*mix($sol-base2, $sol-base3);*/
---sol-dark-mix1:   #2c4d56;/*mix($sol-base01, $sol-base03);*/
---sol-dark-mix2:   #5590b4;/*mix($sol-blue, $sol-base0);*/
---sol-dark-mix3:   #04313c;/*mix($sol-base02, $sol-base03);*/
+--sol-light-mix1:  color-mix(in srgb, var(--sol-base1 ), var(--sol-base3 ));
+--sol-light-mix2:  color-mix(in srgb, var(--sol-blue  ), var(--sol-base00));
+--sol-light-mix3:  color-mix(in srgb, var(--sol-base2 ), var(--sol-base3 ));
+--sol-dark-mix1:   color-mix(in srgb, var(--sol-base01), var(--sol-base03));
+--sol-dark-mix2:   color-mix(in srgb, var(--sol-blue  ), var(--sol-base0 ));
+--sol-dark-mix3:   color-mix(in srgb, var(--sol-base02), var(--sol-base03));
 }
 
 
