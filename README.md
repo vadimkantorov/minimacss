@@ -24,6 +24,26 @@ make SASS=dart-sass/sass solarized.css solarized-light.css solarized-dark.css
 
 # Screen size breakpoints
 The only place where SCSS/SASS variables are preserved in this version of CSS is media queries / breakpoints to modify CSS dependent on the device screen size. For now, CSS variables are not supported for use in media queries (https://bholmes.dev/blog/alternative-to-css-variable-media-queries/, https://drafts.csswg.org/css-env-1/).
+
+https://github.com/jekyll/minima/blob/master/_sass/minima/initialize.scss : 
+```sass
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+```
 - `@media screen and (min-width: 600px) /* on-medium = on-palm */`
 - `@media screen and (min-width: 800px)`
 - `@media screen and (max-width: 800px) /* on-laptop */`
