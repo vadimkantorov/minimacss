@@ -22,6 +22,14 @@ make SASS=dart-sass/sass auto.css classic.css dark.css
 make SASS=dart-sass/sass solarized.css solarized-light.css solarized-dark.css
 ```
 
+# Skins available in [minima](https://github.com/jekyll/minima)
+- `classic` - `Default, light color scheme.`
+- `dark` - `Dark variant of the classic skin.
+- `auto` - `Adaptive skin based on the default classic and dark skins.`
+- `solarized-light` - `Light variant of solarized color scheme.`
+- `solarized-dark` - `Dark variant of solarized color scheme.`
+- `solarized` - `Adaptive skin for solarized color scheme skins.`
+
 # Screen size breakpoints
 The only place where SCSS/SASS variables are preserved in this version of CSS is media queries / breakpoints to modify CSS dependent on the device screen size. For now, CSS variables are not supported for use in media queries (https://bholmes.dev/blog/alternative-to-css-variable-media-queries/, https://drafts.csswg.org/css-env-1/).
 
