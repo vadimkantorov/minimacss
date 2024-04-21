@@ -24,7 +24,7 @@ make SASS=dart-sass/sass solarized.css solarized-light.css solarized-dark.css
 
 # Skins available in [minima](https://github.com/jekyll/minima)
 - `classic` - `Default, light color scheme.`
-- `dark` - `Dark variant of the classic skin.
+- `dark` - `Dark variant of the classic skin.`
 - `auto` - `Adaptive skin based on the default classic and dark skins.`
 - `solarized-light` - `Light variant of solarized color scheme.`
 - `solarized-dark` - `Dark variant of solarized color scheme.`
